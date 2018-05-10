@@ -4,7 +4,8 @@
 
 TODO: What is the version of the OpenZeppelin library? This test will assume 1.9.0 until advised.
 
-Commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62).
+Commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62) and
+[f1c5bb7](https://github.com/Oneledger/OLT/commit/f1c5bb7a439782a85204e9764598d695649098f4).
 
 <br />
 
