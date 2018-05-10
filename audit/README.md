@@ -34,6 +34,7 @@ TODO - Check that no potential vulnerabilities have been identified in the crowd
 ## Recommendations
 
 * [ ] **LOW IMPORTANCE** `OneledgerToken.decimals` returns the `uint256` data type instead of `uint8` as recommended in the [ERC20 token standard]
+* [ ] **LOW IMPORTANCE** Where convenient, it is safer to use *Claimable* instead of *Ownable* when ownership of contracts need to be transferred
 
 <br />
 
