@@ -118,9 +118,9 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 * [ ] [code-review/ICO.md](code-review/ICO.md)
   * [ ] contract ICO is Ownable
     * [ ] using SafeMath for uint256;
-* [ ] [code-review/OneledgerToken.md](code-review/OneledgerToken.md)
-  * [ ] contract OneledgerToken is MintableToken
-    * [ ] using SafeMath for uint256;
+* [x] [code-review/OneledgerToken.md](code-review/OneledgerToken.md)
+  * [x] contract OneledgerToken is MintableToken
+    * [x] using SafeMath for uint256;
 * [ ] [code-review/OneledgerTokenVesting.md](code-review/OneledgerTokenVesting.md)
   * [ ] contract OneledgerTokenVesting
     * [ ] using SafeMath for uint256;
@@ -129,8 +129,8 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 
 ### OpenZeppelin 1.8.0 Dependencies
 
-* [ ] [openzeppelin-code-review/math/SafeMath.md](openzeppelin-code-review/math/SafeMath.md)
-  * [ ] library SafeMath
+* [x] [openzeppelin-code-review/math/SafeMath.md](openzeppelin-code-review/math/SafeMath.md)
+  * [x] library SafeMath
 * [ ] [openzeppelin-code-review/ownership/Ownable.md](openzeppelin-code-review/ownership/Ownable.md)
   * [ ] contract Ownable
 * [ ] [openzeppelin-code-review/token/ERC20/BasicToken.md](openzeppelin-code-review/token/ERC20/BasicToken.md)
