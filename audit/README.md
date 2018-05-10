@@ -34,7 +34,7 @@ TODO - Check that no potential vulnerabilities have been identified in the crowd
 ## Recommendations
 
 * [ ] **LOW IMPORTANCE** `OneledgerToken.decimals` returns the `uint256` data type instead of `uint8` as recommended in the [ERC20 token standard]
-* [ ] **LOW IMPORTANCE** Where convenient, it is safer to use *Claimable* instead of *Ownable* when ownership of contracts need to be transferred
+* [ ] **VERY LOW IMPORTANCE** Where convenient, it is safer to use *Claimable* instead of *Ownable* when ownership of contracts need to be transferred. It is not too important for the ICO contract as this contract has a short life anyway. It is not important for the token contract as the token contract ownership does not any ability other than to execute the `activate()` function right after the crowdsale is completed. And the vesting contract does not need the *Ownable* ownership
 
 <br />
 
@@ -132,8 +132,8 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 
 * [x] [openzeppelin-code-review/math/SafeMath.md](openzeppelin-code-review/math/SafeMath.md)
   * [x] library SafeMath
-* [ ] [openzeppelin-code-review/ownership/Ownable.md](openzeppelin-code-review/ownership/Ownable.md)
-  * [ ] contract Ownable
+* [x] [openzeppelin-code-review/ownership/Ownable.md](openzeppelin-code-review/ownership/Ownable.md)
+  * [x] contract Ownable
 * [ ] [openzeppelin-code-review/token/ERC20/BasicToken.md](openzeppelin-code-review/token/ERC20/BasicToken.md)
   * [ ] contract BasicToken is ERC20Basic
     * [ ] using SafeMath for uint256;
