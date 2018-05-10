@@ -55,3 +55,29 @@ OpenZeppelin Dependencies
 Excluded as this is used for testing:
 
 * [../contracts/Migrations.sol](../contracts/Migrations.sol)
+
+Compiler warnings:
+
+```
+ownership/Ownable.sol:20:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+ownership/Ownable.sol:20:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+OneledgerTokenVesting.sol:27:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function OneledgerTokenVesting(
+    ^ (Relevant source part starts here and spans across multiple lines).
+ICO.sol:34:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function ICO(address _wallet, uint256 _rate, uint256 _startDate, uint256 _weiCap) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+ICO.sol:100:5: Warning: Function state mutability can be restricted to view
+    function validatePurchase(uint256 weiPaid) internal {
+    ^ (Relevant source part starts here and spans across multiple lines).
+ownership/Ownable.sol:20:3: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+  function Ownable() public {
+  ^ (Relevant source part starts here and spans across multiple lines).
+OneledgertokenVesting.sol:27:5: Warning: Defining constructors as functions with the same name as the contract is deprecated. Use "constructor(...) { ... }" instead.
+    function OneledgerTokenVesting(
+    ^ (Relevant source part starts here and spans across multiple lines).
+```
