@@ -28,6 +28,6 @@ TODO: What is the version of the OpenZeppelin library
   * [ ] contract OneledgerTokenVesting
   * [ ]     using SafeMath for uint256;
 
-### Out Of Scope
+Excluded as this is used for testing:
 
 * [../contracts/Migrations.sol](../contracts/Migrations.sol)
