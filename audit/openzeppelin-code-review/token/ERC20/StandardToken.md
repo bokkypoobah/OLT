@@ -1,3 +1,12 @@
+# StandardToken
+
+Source file [../../../openzeppelin-contracts/token/ERC20/StandardToken.sol](../../../openzeppelin-contracts/token/ERC20/StandardToken.sol).
+
+<br />
+
+<hr />
+
+```javascript
 pragma solidity ^0.4.18;
 
 import "./BasicToken.sol";
@@ -98,3 +107,5 @@ contract StandardToken is ERC20, BasicToken {
   }
 
 }
+
+```

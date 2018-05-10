@@ -1,3 +1,12 @@
+# ERC20
+
+Source file [../../../openzeppelin-contracts/token/ERC20/ERC20.sol](../../../openzeppelin-contracts/token/ERC20/ERC20.sol).
+
+<br />
+
+<hr />
+
+```javascript
 pragma solidity ^0.4.18;
 
 import "./ERC20Basic.sol";
@@ -13,3 +22,5 @@ contract ERC20 is ERC20Basic {
   function approve(address spender, uint256 value) public returns (bool);
   event Approval(address indexed owner, address indexed spender, uint256 value);
 }
+
+```

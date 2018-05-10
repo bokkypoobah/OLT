@@ -1,3 +1,12 @@
+# MintableToken
+
+Source file [../../../openzeppelin-contracts/token/ERC20/MintableToken.sol](../../../openzeppelin-contracts/token/ERC20/MintableToken.sol).
+
+<br />
+
+<hr />
+
+```javascript
 pragma solidity ^0.4.18;
 
 import "./StandardToken.sol";
@@ -46,3 +55,5 @@ contract MintableToken is StandardToken, Ownable {
     return true;
   }
 }
+
+```

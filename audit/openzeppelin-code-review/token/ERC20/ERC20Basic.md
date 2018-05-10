@@ -1,3 +1,12 @@
+# ERC20Basic
+
+Source file [../../../openzeppelin-contracts/token/ERC20/ERC20Basic.sol](../../../openzeppelin-contracts/token/ERC20/ERC20Basic.sol).
+
+<br />
+
+<hr />
+
+```javascript
 pragma solidity ^0.4.18;
 
 
@@ -12,3 +21,5 @@ contract ERC20Basic {
   function transfer(address to, uint256 value) public returns (bool);
   event Transfer(address indexed from, address indexed to, uint256 value);
 }
+
+```

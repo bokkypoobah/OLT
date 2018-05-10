@@ -1,3 +1,12 @@
+# Ownable
+
+Source file [../../openzeppelin-contracts/ownership/Ownable.sol](../../openzeppelin-contracts/ownership/Ownable.sol).
+
+<br />
+
+<hr />
+
+```javascript
 pragma solidity ^0.4.18;
 
 
@@ -40,3 +49,5 @@ contract Ownable {
   }
 
 }
+
+```
