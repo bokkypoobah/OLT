@@ -33,7 +33,7 @@ TODO - Check that no potential vulnerabilities have been identified in the crowd
 
 ## Recommendations
 
-TODO
+* [ ] **LOW IMPORTANCE** `OneledgerToken.decimals` returns the `uint256` data type instead of `uint8` as recommended in the [ERC20 token standard]
 
 <br />
 
@@ -271,3 +271,5 @@ token/ERC20/MintableToken.sol:45:5: Warning: Invoking events without "emit" pref
 <br />
 
 (c) BokkyPooBah / Bok Consulting Pty Ltd for OneLedger - May 11 2018. The MIT Licence.
+
+[ERC20 token standard]: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md
