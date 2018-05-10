@@ -1,0 +1,89 @@
+MODE               = 'test'
+GETHATTACHPOINT    = 'ipc:./testchain/geth.ipc'
+PASSWORD           = ''
+SOURCEDIR          = '../../contracts'
+TOKENSOL           = 'Oneledgertoken.sol'
+TOKENJS            = 'Oneledgertoken.js'
+CROWDSALESOL       = 'ICO.sol'
+CROWDSALEJS        = 'ICO.js'
+VESTINGSOL       = 'OneledgertokenVesting.sol'
+VESTINGJS        = 'OneledgertokenVesting.js'
+DEPLOYMENTDATA     = 'deploymentData.txt'
+INCLUDEJS          = './include.js'
+TEST1OUTPUT        = 'test1output.txt'
+TEST1RESULTS       = 'test1results.txt'
+CURRENTTIME        = '1525968597' 'Thu 10 May 2018 16:09:57 UTC'
+START_DATE         = '1525968627' 'Thu 10 May 2018 16:10:27 UTC'
+END_DATE           = '1525968687' 'Thu 10 May 2018 16:11:27 UTC'
+REFUND_END_DATE    = '1525968717' 'Thu 10 May 2018 16:11:57 UTC'
+--- Differences ../../contracts/Oneledgertoken.sol Oneledgertoken.sol ---
+3,4c3,4
+< import "zeppelin-solidity/contracts/math/SafeMath.sol";
+< import "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
+---
+> import "math/SafeMath.sol";
+> import "token/ERC20/MintableToken.sol";
+--- Differences ../../contracts/ICO.sol ICO.sol ---
+5,7c5,7
+< import "zeppelin-solidity/contracts/math/SafeMath.sol";
+< import "zeppelin-solidity/contracts/ownership/Ownable.sol";
+< import "zeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+---
+> import "math/SafeMath.sol";
+> import "ownership/Ownable.sol";
+> import "token/ERC20/ERC20.sol";
+37c37
+<         require(_weiCap.mul(_rate) <= TOTAL_TOKEN_SUPPLY);
+---
+>         // require(_weiCap.mul(_rate) <= TOTAL_TOKEN_SUPPLY);
+--- Differences ../../contracts/OneledgertokenVesting.sol OneledgertokenVesting.sol ---
+4c4
+< import "zeppelin-solidity/contracts/math/SafeMath.sol";
+---
+> import "math/SafeMath.sol";
+solc, the solidity compiler commandline interface
+Version: 0.4.23+commit.124ca40d.Darwin.appleclang
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.8.6-stable-12683fec/darwin-amd64/go1.10
+coinbase: 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e
+at block: 6 (Fri, 11 May 2018 02:09:58 AEST)
+ datadir: /Users/bok/Projects/OneLedgerCrowdsaleContractAudit/audit/test/testchain
+ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 shh:1.0 txpool:1.0 web3:1.0
+
+> 
+true
+> 
+true
+> 
+true
+> 
+true
+> 
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+undefined
+> 
+> 

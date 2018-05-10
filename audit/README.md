@@ -1,11 +1,15 @@
 # OneLedger Crowdsale Contract Audit
 
+## Summary
+
 [OneLedger](https://oneledger.io/) intends to run a crowdsale commencing on May 25 2018.
 
-TODO: What is the version of the OpenZeppelin library? This test will assume 1.8.0 as advised.
+Bok Consulting Pty Ltd was commissioned to perform an audit on the Ethereum smart contracts for OneLedger's crowdsale.
 
-Commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62) and
+This audit has been conducted on Vice OneLedger's source code in commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62) and
 [f1c5bb7](https://github.com/Oneledger/OLT/commit/f1c5bb7a439782a85204e9764598d695649098f4).
+
+TODO - Check that no potential vulnerabilities have been identified in the crowdsale and token contracts.
 
 <br />
 
@@ -13,7 +17,97 @@ Commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03
 
 ## Table Of Contents
 
+* [Summary](#summary)
+* [Recommendations](#recommendations)
+* [Potential Vulnerabilities](#potential-vulnerabilities)
+* [Scope](#scope)
+* [Limitations](#limitations)
+* [Due Diligence](#due-diligence)
+* [Risks](#risks)
+* [Testing](#testing)
 * [Code Review](#code-review)
+
+<br />
+
+<hr />
+
+## Recommendations
+
+TODO
+
+<br />
+
+<hr />
+
+## Potential Vulnerabilities
+
+TODO - Check that no potential vulnerabilities have been identified in the crowdsale and token contracts.
+
+<br />
+
+<hr />
+
+## Scope
+
+This audit is into the technical aspects of the crowdsale contracts. The primary aim of this audit is to ensure that funds
+contributed to these contracts are not easily attacked or stolen by third parties. The secondary aim of this audit is to
+ensure the coded algorithms work as expected. This audit does not guarantee that that the code is bugfree, but intends to
+highlight any areas of weaknesses.
+
+<br />
+
+<hr />
+
+## Limitations
+
+This audit makes no statements or warranties about the viability of the OneLedger's business proposition, the individuals
+involved in this business or the regulatory regime for the business model.
+
+<br />
+
+<hr />
+
+## Due Diligence
+
+As always, potential participants in any crowdsale are encouraged to perform their due diligence on the business proposition
+before funding any crowdsales.
+
+Potential participants are also encouraged to only send their funds to the official crowdsale Ethereum address, published on
+the crowdsale beneficiary's official communication channel.
+
+Scammers have been publishing phishing address in the forums, twitter and other communication channels, and some go as far as
+duplicating crowdsale websites. Potential participants should NOT just click on any links received through these messages.
+Scammers have also hacked the crowdsale website to replace the crowdsale contract address with their scam address.
+ 
+Potential participants should also confirm that the verified source code on EtherScan.io for the published crowdsale address
+matches the audited source code, and that the deployment parameters are correctly set, including the constant parameters.
+
+<br />
+
+<hr />
+
+## Risks
+
+TODO
+
+<br />
+
+<hr />
+
+## Testing
+
+Details of the testing environment can be found in [test](test).
+
+The following functions were tested using the script [test/01_test1.sh](test/01_test1.sh) with the summary results saved
+in [test/test1results.txt](test/test1results.txt) and the detailed output saved in [test/test1output.txt](test/test1output.txt):
+
+* [ ] Deploy crowdsale contract
+  * [ ] Deploy token contract
+* [ ] Deploy vesting contract
+* [ ] Contribute to the crowdsale contract
+* [ ] Finalise crowdsale
+* [ ] Transfer tokens to the vesting contract
+* [ ] `transfer(...)`, `approve(...)` and `transferFrom(...)`
 
 <br />
 
@@ -57,6 +151,8 @@ Commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03
 
 * [../contracts/Migrations.sol](../contracts/Migrations.sol)
 
+<br />
+
 ### Compiler Error
 
 There is a Solidity command line compiler bug in OS/X version 0.4.23 where certain statements in the constructor cannot be evaluated without the compiler throwing an internal error. The statement that triggers this error is in the constructor of ICO.sol and is the line `require(_weiCap.mul(_rate) <= TOTAL_TOKEN_SUPPLY);`. For this testing, this statement has been automatically removed to enable the compilation of the Solidity smart contracts.
@@ -70,6 +166,8 @@ Dynamic exception type: boost::exception_detail::clone_impl<dev::solidity::Inter
 std::exception::what: Assembly exception for bytecode
 [dev::tag_comment*] = Assembly exception for bytecode
 ```
+
+<br />
 
 ### Compiler Warnings
 
@@ -167,3 +265,9 @@ token/ERC20/MintableToken.sol:45:5: Warning: Invoking events without "emit" pref
     MintFinished();
     ^------------^
 ```
+
+<br />
+
+<br />
+
+(c) BokkyPooBah / Bok Consulting Pty Ltd for OneLedger - May 11 2018. The MIT Licence.
