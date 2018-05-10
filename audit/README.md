@@ -2,7 +2,7 @@
 
 [OneLedger](https://oneledger.io/) intends to run a crowdsale commencing on May 25 2018.
 
-TODO: What is the version of the OpenZeppelin library
+TODO: What is the version of the OpenZeppelin library? This test will assume 1.9.0 until advised.
 
 <br />
 
