@@ -3,10 +3,10 @@ PASSWORD=
 
 SOURCEDIR=../../contracts
 
-TOKENSOL=ICO.sol
-TOKENJS=ICO.js
-CROWDSALESOL=Oneledgertoken.sol
-CROWDSALEJS=Oneledgertoken.js
+TOKENSOL=Oneledgertoken.sol
+TOKENJS=Oneledgertoken.js
+CROWDSALESOL=ICO.sol
+CROWDSALEJS=ICO.js
 VESTINGSOL=OneledgertokenVesting.sol
 VESTINGJS=OneledgertokenVesting.js
 
