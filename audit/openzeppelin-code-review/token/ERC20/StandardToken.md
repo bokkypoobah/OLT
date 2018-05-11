@@ -7,8 +7,10 @@ Source file [../../../openzeppelin-contracts/token/ERC20/StandardToken.sol](../.
 <hr />
 
 ```javascript
+// BK Ok
 pragma solidity ^0.4.18;
 
+// BK Next 2 Ok
 import "./BasicToken.sol";
 import "./ERC20.sol";
 
@@ -20,8 +22,10 @@ import "./ERC20.sol";
  * @dev https://github.com/ethereum/EIPs/issues/20
  * @dev Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol
  */
+// BK Ok
 contract StandardToken is ERC20, BasicToken {
 
+  // BK Ok
   mapping (address => mapping (address => uint256)) internal allowed;
 
 
@@ -31,15 +35,24 @@ contract StandardToken is ERC20, BasicToken {
    * @param _to address The address which you want to transfer to
    * @param _value uint256 the amount of tokens to be transferred
    */
+  // BK Ok - An account can transfer tokens from second account if an approval has been given 
   function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {
+    // BK Ok - Cannot burn to address 0x0
     require(_to != address(0));
+    // BK Ok - Sufficient tokens in the from account
     require(_value <= balances[_from]);
+    // BK Ok - Approval given by the from account
     require(_value <= allowed[_from][msg.sender]);
 
+    // BK Ok
     balances[_from] = balances[_from].sub(_value);
+    // BK Ok
     balances[_to] = balances[_to].add(_value);
+    // BK Ok
     allowed[_from][msg.sender] = allowed[_from][msg.sender].sub(_value);
+    // BK Ok - Log event
     Transfer(_from, _to, _value);
+    // BK Ok
     return true;
   }
 
@@ -53,9 +66,13 @@ contract StandardToken is ERC20, BasicToken {
    * @param _spender The address which will spend the funds.
    * @param _value The amount of tokens to be spent.
    */
+  // BK Ok - An account can provide approval to another account to spend the first account's tokens
   function approve(address _spender, uint256 _value) public returns (bool) {
+    // BK Ok
     allowed[msg.sender][_spender] = _value;
+    // BK Ok - Log event
     Approval(msg.sender, _spender, _value);
+    // BK Ok
     return true;
   }
 
@@ -65,7 +82,9 @@ contract StandardToken is ERC20, BasicToken {
    * @param _spender address The address which will spend the funds.
    * @return A uint256 specifying the amount of tokens still available for the spender.
    */
+  // BK Ok - View function
   function allowance(address _owner, address _spender) public view returns (uint256) {
+    // BK Ok
     return allowed[_owner][_spender];
   }
 
@@ -79,9 +98,13 @@ contract StandardToken is ERC20, BasicToken {
    * @param _spender The address which will spend the funds.
    * @param _addedValue The amount of tokens to increase the allowance by.
    */
+  // BK Ok
   function increaseApproval(address _spender, uint _addedValue) public returns (bool) {
+    // BK Ok
     allowed[msg.sender][_spender] = allowed[msg.sender][_spender].add(_addedValue);
+    // BK Ok - Log event
     Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    // BK Ok
     return true;
   }
 
@@ -95,14 +118,22 @@ contract StandardToken is ERC20, BasicToken {
    * @param _spender The address which will spend the funds.
    * @param _subtractedValue The amount of tokens to decrease the allowance by.
    */
+  // BK Ok
   function decreaseApproval(address _spender, uint _subtractedValue) public returns (bool) {
+    // BK Ok
     uint oldValue = allowed[msg.sender][_spender];
+    // BK Ok
     if (_subtractedValue > oldValue) {
+      // BK Ok
       allowed[msg.sender][_spender] = 0;
+    // BK Ok
     } else {
+      // BK Ok
       allowed[msg.sender][_spender] = oldValue.sub(_subtractedValue);
     }
+    // BK Ok - Log event
     Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
+    // BK Ok
     return true;
   }
 

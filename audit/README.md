@@ -134,17 +134,17 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
   * [x] library SafeMath
 * [x] [openzeppelin-code-review/ownership/Ownable.md](openzeppelin-code-review/ownership/Ownable.md)
   * [x] contract Ownable
-* [ ] [openzeppelin-code-review/token/ERC20/BasicToken.md](openzeppelin-code-review/token/ERC20/BasicToken.md)
-  * [ ] contract BasicToken is ERC20Basic
-    * [ ] using SafeMath for uint256;
-* [ ] [openzeppelin-code-review/token/ERC20/ERC20.md](openzeppelin-code-review/token/ERC20/ERC20.md)
-  * [ ] contract ERC20 is ERC20Basic
-* [ ] [openzeppelin-code-review/token/ERC20/ERC20Basic.md](openzeppelin-code-review/token/ERC20/ERC20Basic.md)
-  * [ ] contract ERC20Basic
+* [x] [openzeppelin-code-review/token/ERC20/ERC20Basic.md](openzeppelin-code-review/token/ERC20/ERC20Basic.md)
+  * [x] contract ERC20Basic
+* [x] [openzeppelin-code-review/token/ERC20/ERC20.md](openzeppelin-code-review/token/ERC20/ERC20.md)
+  * [x] contract ERC20 is ERC20Basic
+* [x] [openzeppelin-code-review/token/ERC20/BasicToken.md](openzeppelin-code-review/token/ERC20/BasicToken.md)
+  * [x] contract BasicToken is ERC20Basic
+    * [x] using SafeMath for uint256;
+* [x] [openzeppelin-code-review/token/ERC20/StandardToken.md](openzeppelin-code-review/token/ERC20/StandardToken.md)
+  * [x] contract StandardToken is ERC20, BasicToken
 * [ ] [openzeppelin-code-review/token/ERC20/MintableToken.md](openzeppelin-code-review/token/ERC20/MintableToken.md)
   * [ ] contract MintableToken is StandardToken, Ownable
-* [ ] [openzeppelin-code-review/token/ERC20/StandardToken.md](openzeppelin-code-review/token/ERC20/StandardToken.md)
-  * [ ] contract StandardToken is ERC20, BasicToken
 
 <br />
 
