@@ -6,7 +6,7 @@
 
 Bok Consulting Pty Ltd was commissioned to perform an audit on the Ethereum smart contracts for OneLedger's crowdsale.
 
-This audit has been conducted on Vice OneLedger's source code in commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62) and
+This audit has been conducted on OneLedger's source code in commits [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62) and
 [f1c5bb7](https://github.com/Oneledger/OLT/commit/f1c5bb7a439782a85204e9764598d695649098f4).
 
 TODO - Check that no potential vulnerabilities have been identified in the crowdsale and token contracts.
