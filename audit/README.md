@@ -143,8 +143,8 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
     * [x] using SafeMath for uint256;
 * [x] [openzeppelin-code-review/token/ERC20/StandardToken.md](openzeppelin-code-review/token/ERC20/StandardToken.md)
   * [x] contract StandardToken is ERC20, BasicToken
-* [ ] [openzeppelin-code-review/token/ERC20/MintableToken.md](openzeppelin-code-review/token/ERC20/MintableToken.md)
-  * [ ] contract MintableToken is StandardToken, Ownable
+* [x] [openzeppelin-code-review/token/ERC20/MintableToken.md](openzeppelin-code-review/token/ERC20/MintableToken.md)
+  * [x] contract MintableToken is StandardToken, Ownable
 
 <br />
 
@@ -271,6 +271,6 @@ token/ERC20/MintableToken.sol:45:5: Warning: Invoking events without "emit" pref
 
 <br />
 
-(c) BokkyPooBah / Bok Consulting Pty Ltd for OneLedger - May 11 2018. The MIT Licence.
+(c) BokkyPooBah / Bok Consulting Pty Ltd for OneLedger - May 13 2018. The MIT Licence.
 
 [ERC20 token standard]: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md

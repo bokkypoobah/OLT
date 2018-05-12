@@ -7,8 +7,10 @@ Source file [../../../openzeppelin-contracts/token/ERC20/MintableToken.sol](../.
 <hr />
 
 ```javascript
+// BK Ok
 pragma solidity ^0.4.18;
 
+// BK Next 2 Ok
 import "./StandardToken.sol";
 import "../../ownership/Ownable.sol";
 
@@ -19,15 +21,21 @@ import "../../ownership/Ownable.sol";
  * @dev Issue: * https://github.com/OpenZeppelin/zeppelin-solidity/issues/120
  * Based on code by TokenMarketNet: https://github.com/TokenMarketNet/ico/blob/master/contracts/MintableToken.sol
  */
+// BK Ok
 contract MintableToken is StandardToken, Ownable {
+  // BK Next 2 Ok - Events
   event Mint(address indexed to, uint256 amount);
   event MintFinished();
 
+  // BK Ok
   bool public mintingFinished = false;
 
 
+  // BK Ok - Modifier
   modifier canMint() {
+    // BK Ok
     require(!mintingFinished);
+    // BK Ok
     _;
   }
 
@@ -37,11 +45,16 @@ contract MintableToken is StandardToken, Ownable {
    * @param _amount The amount of tokens to mint.
    * @return A boolean that indicates if the operation was successful.
    */
+  // BK Ok - Only owner can mint. The owner is the ICO contract until the sale is closed, when minting is disabled
   function mint(address _to, uint256 _amount) onlyOwner canMint public returns (bool) {
+    // BK Ok
     totalSupply_ = totalSupply_.add(_amount);
+    // BK Ok
     balances[_to] = balances[_to].add(_amount);
+    // BK Next 2 Ok - Log events
     Mint(_to, _amount);
     Transfer(address(0), _to, _amount);
+    // BK Ok
     return true;
   }
 
@@ -49,9 +62,13 @@ contract MintableToken is StandardToken, Ownable {
    * @dev Function to stop minting new tokens.
    * @return True if the operation was successful.
    */
+  // BK Ok - Only owner can execute. The owner is the ICO contract until the sale is closed
   function finishMinting() onlyOwner canMint public returns (bool) {
+    // BK Ok
     mintingFinished = true;
+    // BK Ok - Log event
     MintFinished();
+    // BK Ok
     return true;
   }
 }
