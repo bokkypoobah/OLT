@@ -7,23 +7,31 @@ Source file [../../contracts/OneledgerTokenVesting.sol](../../contracts/Oneledge
 <hr />
 
 ```javascript
+// BK Ok
 pragma solidity 0.4.23;
 
+// BK Next 2 Ok
 import "./OneledgerToken.sol";
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
 
+// BK Ok
 contract OneledgerTokenVesting {
+    // BK Ok
     using SafeMath for uint256;
 
+    // BK Ok - Event
     event Released(uint256 amount);
 
     // beneficiary of tokens after they are released
+    // BK Ok
     address public beneficiary;
 
+    // BK Next 3 Ok
     uint256 public startFrom;
     uint256 public period;
     uint256 public tokensReleasedPerPeriod;
 
+    // BK Ok
     uint256 public elapsedPeriods;
 
     /**
@@ -33,15 +41,19 @@ contract OneledgerTokenVesting {
      * @param _period The preiod to release the token
      * @param _tokensReleasedPerPeriod the token to release per period
      */
+    // BK Ok - Constructor
     constructor(
         address _beneficiary,
         uint256 _startFrom,
         uint256 _period,
         uint256 _tokensReleasedPerPeriod
     ) public {
+        // BK Ok
         require(_beneficiary != address(0));
+        // BK Ok
         require(_startFrom >= now);
 
+        // BK Next 5 Ok
         beneficiary = _beneficiary;
         startFrom = _startFrom;
         period = _period;
@@ -53,15 +65,25 @@ contract OneledgerTokenVesting {
      * @dev release
      * param _token Oneledgertoken that will be released to beneficiary
      */
+    // BK Ok - Anyone can call, but the tokens are only transferred to the beneficiary
     function release(OneledgerToken token) public {
+        // BK Ok
         require(token.balanceOf(this) >= 0 && now >= startFrom);
+        // BK Ok
         uint256 elapsedTime = now.sub(startFrom);
+        // BK Ok
         uint256 periodsInCurrentRelease = elapsedTime.div(period).sub(elapsedPeriods);
+        // BK Ok
         uint256 tokensReadyToRelease = periodsInCurrentRelease.mul(tokensReleasedPerPeriod);
+        // BK Ok
         uint256 amountToTransfer = tokensReadyToRelease > token.balanceOf(this) ? token.balanceOf(this) : tokensReadyToRelease;
+        // BK Ok
         require(amountToTransfer > 0);
+        // BK Ok
         elapsedPeriods = elapsedPeriods.add(periodsInCurrentRelease);
+        // BK Ok
         token.transfer(beneficiary, amountToTransfer);
+        // BK Ok - Log event
         emit Released(amountToTransfer);
     }
 }

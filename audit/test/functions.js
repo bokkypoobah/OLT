@@ -18,7 +18,7 @@ addAccount(eth.accounts[6], "Account #6");
 addAccount(eth.accounts[7], "Account #7");
 addAccount(eth.accounts[8], "Account #8");
 addAccount(eth.accounts[9], "Account #9");
-addAccount(eth.accounts[10], "Account #10");
+addAccount(eth.accounts[10], "Account #10 - Vesting beneficiary");
 addAccount(eth.accounts[11], "Account #11");
 
 var minerAccount = eth.accounts[0];
@@ -31,7 +31,7 @@ var account6 = eth.accounts[6];
 var account7 = eth.accounts[7];
 var account8 = eth.accounts[8];
 var account9 = eth.accounts[9];
-var account10 = eth.accounts[10];
+var vestingBeneficiary = eth.accounts[10];
 var account11 = eth.accounts[11];
 
 var baseBlock = eth.blockNumber;
@@ -378,57 +378,38 @@ function printCrowdsaleContractDetails() {
 
 
 // -----------------------------------------------------------------------------
-// BonusList Contract
+// Vesting Contract
 // -----------------------------------------------------------------------------
-var bonusListContractAddress = null;
-var bonusListContractAbi = null;
+var vestingContractAddress = null;
+var vestingContractAbi = null;
 
-function addBonusListContractAddressAndAbi(address, bonusListAbi) {
-  bonusListContractAddress = address;
-  bonusListContractAbi = bonusListAbi;
+function addVestingContractAddressAndAbi(address, vestingAbi) {
+  vestingContractAddress = address;
+  vestingContractAbi = vestingAbi;
 }
 
-var bonusListFromBlock = 0;
-function printBonusListContractDetails() {
-  console.log("RESULT: bonusListContractAddress=" + bonusListContractAddress);
-  if (bonusListContractAddress != null && bonusListContractAbi != null) {
-    var contract = eth.contract(bonusListContractAbi).at(bonusListContractAddress);
-    console.log("RESULT: bonusList.owner=" + contract.owner());
-    console.log("RESULT: bonusList.newOwner=" + contract.newOwner());
-    console.log("RESULT: bonusList.sealed=" + contract.sealed());
+var vestingFromBlock = 0;
+function printVestingContractDetails() {
+  console.log("RESULT: vestingContractAddress=" + vestingContractAddress);
+  if (vestingContractAddress != null && vestingContractAbi != null) {
+    var contract = eth.contract(vestingContractAbi).at(vestingContractAddress);
+    console.log("RESULT: vesting.beneficiary=" + contract.beneficiary());
+    console.log("RESULT: vesting.startFrom=" + contract.startFrom() + " " + new Date(contract.startFrom() * 1000).toUTCString() + " " + new Date(contract.startFrom() * 1000).toString());
+    console.log("RESULT: vesting.period=" + contract.period());
+    console.log("RESULT: vesting.tokensReleasedPerPeriod=" + contract.tokensReleasedPerPeriod().shift(-18) + " tokens");
+    console.log("RESULT: vesting.elapsedPeriods=" + contract.elapsedPeriods());
 
     var latestBlock = eth.blockNumber;
     var i;
 
-    var ownershipTransferredEvents = contract.OwnershipTransferred({}, { fromBlock: bonusListFromBlock, toBlock: latestBlock });
+    var releasedEvents = contract.Released({}, { fromBlock: vestingFromBlock, toBlock: latestBlock });
     i = 0;
-    ownershipTransferredEvents.watch(function (error, result) {
-      console.log("RESULT: OwnershipTransferred " + i++ + " #" + result.blockNumber + " " + JSON.stringify(result.args));
+    releasedEvents.watch(function (error, result) {
+      console.log("RESULT: Released " + i++ + " #" + result.blockNumber + " " + JSON.stringify(result.args));
     });
-    ownershipTransferredEvents.stopWatching();
+    releasedEvents.stopWatching();
 
-    var adminAddedEvents = contract.AdminAdded({}, { fromBlock: bonusListFromBlock, toBlock: latestBlock });
-    i = 0;
-    adminAddedEvents.watch(function (error, result) {
-      console.log("RESULT: AdminAdded " + i++ + " #" + result.blockNumber + " " + JSON.stringify(result.args));
-    });
-    adminAddedEvents.stopWatching();
-
-    var adminRemovedEvents = contract.AdminRemoved({}, { fromBlock: bonusListFromBlock, toBlock: latestBlock });
-    i = 0;
-    adminRemovedEvents.watch(function (error, result) {
-      console.log("RESULT: AdminRemoved " + i++ + " #" + result.blockNumber + " " + JSON.stringify(result.args));
-    });
-    adminRemovedEvents.stopWatching();
-
-    var addressListedEvents = contract.AddressListed({}, { fromBlock: bonusListFromBlock, toBlock: latestBlock });
-    i = 0;
-    addressListedEvents.watch(function (error, result) {
-      console.log("RESULT: AddressListed " + i++ + " #" + result.blockNumber + " " + JSON.stringify(result.args));
-    });
-    addressListedEvents.stopWatching();
-
-    bonusListFromBlock = latestBlock + 1;
+    vestingFromBlock = latestBlock + 1;
   }
 }
 

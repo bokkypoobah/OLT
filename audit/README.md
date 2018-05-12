@@ -111,7 +111,9 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 * [x] Contribute to the crowdsale contract after the 2nd whitelist period with no whitelisted amount limits
 * [x] Finalise crowdsale
 * [x] `transfer(...)`, `approve(...)` and `transferFrom(...)`
+* [ ] Deploy vesting contract
 * [ ] Transfer tokens to the vesting contract
+* [ ] Check vesting contract releases tokens
 
 <br />
 
@@ -125,9 +127,9 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 * [x] [code-review/OneledgerToken.md](code-review/OneledgerToken.md)
   * [x] contract OneledgerToken is MintableToken
     * [x] using SafeMath for uint256;
-* [ ] [code-review/OneledgerTokenVesting.md](code-review/OneledgerTokenVesting.md)
-  * [ ] contract OneledgerTokenVesting
-    * [ ] using SafeMath for uint256;
+* [x] [code-review/OneledgerTokenVesting.md](code-review/OneledgerTokenVesting.md)
+  * [x] contract OneledgerTokenVesting
+    * [x] using SafeMath for uint256;
 
 <br />
 

@@ -142,6 +142,9 @@ printTokenContractDetails();
 console.log("RESULT: ");
 
 
+var fullTesting = true;
+
+if (fullTesting) {
 // -----------------------------------------------------------------------------
 var whitelistMessage = "Whitelist Accounts - ac3 and ac4 for 10 ETH each";
 var whitelistAccounts = [account3, account4];
@@ -248,16 +251,17 @@ printTxData("sendContribution3_3Tx", sendContribution3_3Tx);
 printCrowdsaleContractDetails();
 printTokenContractDetails();
 console.log("RESULT: ");
+}
 
 
 // -----------------------------------------------------------------------------
 var finalise_Message = "Finalise And Activate Token Transfers";
 // -----------------------------------------------------------------------------
 console.log("RESULT: ---------- " + finalise_Message + " ----------");
-var finalise_1Tx = crowdsale.closeSale({from: contractOwnerAccount, gas: 100000, gasPrice: defaultGasPrice});
+var finalise_1Tx = crowdsale.closeSale({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
-var finalise_2Tx = token.activate({from: contractOwnerAccount, gas: 100000, gasPrice: defaultGasPrice});
+var finalise_2Tx = token.activate({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
 printBalances();
@@ -270,6 +274,7 @@ printTokenContractDetails();
 console.log("RESULT: ");
 
 
+if (fullTesting) {
 // -----------------------------------------------------------------------------
 var transfer1_Message = "Move Tokens #1";
 // -----------------------------------------------------------------------------
@@ -289,6 +294,41 @@ failIfTxStatusError(transfer1_1Tx, transfer1_Message + " - transfer 0.000001 tok
 failIfTxStatusError(transfer1_2Tx, transfer1_Message + " - approve 0.03 tokens ac4 -> ac6");
 failIfTxStatusError(transfer1_3Tx, transfer1_Message + " - transferFrom 0.03 tokens ac4 -> ac7 by ac6. CHECK for movement");
 printCrowdsaleContractDetails();
+printTokenContractDetails();
+console.log("RESULT: ");
+}
+
+
+// -----------------------------------------------------------------------------
+var deployVesting_Message = "Deploy Vesting Contract";
+var vestingPeriod = 30; // 30 seconds
+var tokensReleasedPerPeriod = new BigNumber(100).shift(18);
+// -----------------------------------------------------------------------------
+console.log("RESULT: ---------- " + deployVesting_Message + " ----------");
+var vestingContract = web3.eth.contract(vestingAbi);
+var vestingTx = null;
+var vestingAddress = null;
+var vestingStart = parseInt(new Date()/1000) + 30;
+var vesting = vestingContract.new(vestingBeneficiary, vestingStart, vestingPeriod, tokensReleasedPerPeriod, {from: contractOwnerAccount, data: vestingBin, gas: 6000000, gasPrice: defaultGasPrice},
+  function(e, contract) {
+    if (!e) {
+      if (!contract.address) {
+        vestingTx = contract.transactionHash;
+      } else {
+        vestingAddress = contract.address;
+        addAccount(vestingAddress, "Vesting Contract");
+        addVestingContractAddressAndAbi(vestingAddress, vestingAbi);
+        console.log("DATA: vestingAddress=" + vestingAddress);
+      }
+    }
+  }
+);
+while (txpool.status.pending > 0) {
+}
+printBalances();
+failIfTxStatusError(vestingTx, deployVesting_Message);
+printTxData("vestingAddress=" + vestingAddress, vestingTx);
+printVestingContractDetails();
 printTokenContractDetails();
 console.log("RESULT: ");
 
