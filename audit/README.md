@@ -102,8 +102,8 @@ Details of the testing environment can be found in [test](test).
 The following functions were tested using the script [test/01_test1.sh](test/01_test1.sh) with the summary results saved
 in [test/test1results.txt](test/test1results.txt) and the detailed output saved in [test/test1output.txt](test/test1output.txt):
 
-* [ ] Deploy crowdsale contract
-  * [ ] Deploy token contract
+* [x] Deploy crowdsale contract
+  * [x] Deploy token contract
 * [ ] Deploy vesting contract
 * [ ] Contribute to the crowdsale contract
 * [ ] Finalise crowdsale
@@ -116,9 +116,9 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 
 ## Code Review
 
-* [ ] [code-review/ICO.md](code-review/ICO.md)
-  * [ ] contract ICO is Ownable
-    * [ ] using SafeMath for uint256;
+* [x] [code-review/ICO.md](code-review/ICO.md)
+  * [x] contract ICO is Ownable
+    * [x] using SafeMath for uint256;
 * [x] [code-review/OneledgerToken.md](code-review/OneledgerToken.md)
   * [x] contract OneledgerToken is MintableToken
     * [x] using SafeMath for uint256;

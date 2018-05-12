@@ -1,0 +1,61 @@
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.000000000000000000           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433        0.000000000000000000           0.000000000000000000 Account #1 - Contract Owner
+ 2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.000000000000000000           0.000000000000000000 Account #2 - Wallet
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5
+ 6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+ 9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
+10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10
+11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+
+---------- Deploy Crowdsale Contract ----------
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.015726424000000000           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.015726424000000000           0.000000000000000000 Account #1 - Contract Owner
+ 2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.000000000000000000           0.000000000000000000 Account #2 - Wallet
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5
+ 6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+ 9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
+10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10
+11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
+12 0x821ca8becdbfb00ca55e722908796a375bc2d538        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x9ff1c6951ec04fdf53dad9ebb2e92e2227c5191c        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+PASS Deploy Crowdsale Contract
+crowdsaleAddress=0x821ca8becdbfb00ca55e722908796a375bc2d538 status=0x1 Success gas=6000000 gasUsed=1965803 costETH=0.015726424 costUSD=10.3275426408 @ ETH/USD=656.7 gasPrice=8 gwei block=4425 txIx=0 txId=0xb59d909d014c15fa33ddbb004b30be56831ebace77d2a4a5229797d8fd406be8 @ 1526141120 Sat, 12 May 2018 16:05:20 UTC
+crowdsaleContractAddress=0x821ca8becdbfb00ca55e722908796a375bc2d538
+crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
+crowdsale.token=0x9ff1c6951ec04fdf53dad9ebb2e92e2227c5191c
+crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
+crowdsale.rate=1000
+crowdsale.initialTime=1526141138 Sat, 12 May 2018 16:05:38 UTC Sun, 13 May 2018 02:05:38 AEST
+crowdsale.saleClosed=false
+crowdsale.weiCap=2000 ETH
+crowdsale.weiRaised=0 ETH
+crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
+tokenContractAddress=0x9ff1c6951ec04fdf53dad9ebb2e92e2227c5191c
+token.owner=0x821ca8becdbfb00ca55e722908796a375bc2d538
+token.symbol=OLT
+token.name=Oneledger Token
+token.decimals=18
+token.totalSupply=0
+token.mintingFinished=false
+token.active=false
+

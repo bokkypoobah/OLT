@@ -32,8 +32,6 @@ START_DATE=`echo "$CURRENTTIME+30" | bc`
 START_DATE_S=`date -r $START_DATE -u`
 END_DATE=`echo "$CURRENTTIME+60*1+30" | bc`
 END_DATE_S=`date -r $END_DATE -u`
-REFUND_END_DATE=`echo "$CURRENTTIME+60*2" | bc`
-REFUND_END_DATE_S=`date -r $REFUND_END_DATE -u`
 
 printf "MODE               = '$MODE'\n" | tee $TEST1OUTPUT
 printf "GETHATTACHPOINT    = '$GETHATTACHPOINT'\n" | tee -a $TEST1OUTPUT
@@ -52,7 +50,6 @@ printf "TEST1RESULTS       = '$TEST1RESULTS'\n" | tee -a $TEST1OUTPUT
 printf "CURRENTTIME        = '$CURRENTTIME' '$CURRENTTIMES'\n" | tee -a $TEST1OUTPUT
 printf "START_DATE         = '$START_DATE' '$START_DATE_S'\n" | tee -a $TEST1OUTPUT
 printf "END_DATE           = '$END_DATE' '$END_DATE_S'\n" | tee -a $TEST1OUTPUT
-printf "REFUND_END_DATE    = '$REFUND_END_DATE' '$REFUND_END_DATE_S'\n" | tee -a $TEST1OUTPUT
 
 # Make copy of SOL file and modify start and end times ---
 # `cp modifiedContracts/SnipCoin.sol .`
@@ -98,7 +95,6 @@ var vestingBin = "0x" + vestingOutput.contracts["$VESTINGSOL:OneledgerTokenVesti
 // console.log("DATA: vestingAbi=" + JSON.stringify(vestingAbi));
 // console.log("DATA: vestingBin=" + JSON.stringify(vestingBin));
 
-exit;
 
 unlockAccounts("$PASSWORD");
 printBalances();
@@ -107,19 +103,16 @@ console.log("RESULT: ");
 
 // -----------------------------------------------------------------------------
 var crowdsaleMessage = "Deploy Crowdsale Contract";
-// 0.05 per VIT
-// ETH/USD = 902.61
-// 902.61 / 0.05 = 18052.2
-var vitPerWei = "18052";
-var strategicPartnersPools = [eth.accounts[12], eth.accounts[13], eth.accounts[14], eth.accounts[15], eth.accounts[16], eth.accounts[17], eth.accounts[18], eth.accounts[19], eth.accounts[20], eth.accounts[21], eth.accounts[22],eth.accounts[23], eth.accounts[24], eth.accounts[25], eth.accounts[26], eth.accounts[27], eth.accounts[28], eth.accounts[29], eth.accounts[30], eth.accounts[31]];
+var rate = "1000";
+var weiCap = new BigNumber("2000").shift(18);
 // -----------------------------------------------------------------------------
-console.log("RESULT: " + crowdsaleMessage);
+console.log("RESULT: ---------- " + crowdsaleMessage + " ----------");
 var crowdsaleContract = web3.eth.contract(crowdsaleAbi);
 var crowdsaleTx = null;
 var crowdsaleAddress = null;
 var tokenAddress = null;
 var token = null;
-var crowdsale = crowdsaleContract.new(wallet, $START_DATE, $END_DATE, $REFUND_END_DATE, vitPerWei, strategicPartnersPools, {from: contractOwnerAccount, data: crowdsaleBin, gas: 6000000, gasPrice: defaultGasPrice},
+var crowdsale = crowdsaleContract.new(wallet, rate, $START_DATE, weiCap, {from: contractOwnerAccount, data: crowdsaleBin, gas: 6000000, gasPrice: defaultGasPrice},
   function(e, contract) {
     if (!e) {
       if (!contract.address) {
@@ -129,7 +122,7 @@ var crowdsale = crowdsaleContract.new(wallet, $START_DATE, $END_DATE, $REFUND_EN
         addAccount(crowdsaleAddress, "Crowdsale Contract");
         addCrowdsaleContractAddressAndAbi(crowdsaleAddress, crowdsaleAbi);
         console.log("DATA: crowdsaleAddress=" + crowdsaleAddress);
-        tokenAddress = crowdsale.vitToken();
+        tokenAddress = crowdsale.token();
         token = eth.contract(tokenAbi).at(tokenAddress);
         addAccount(tokenAddress, "Token '" + token.symbol() + "' '" + token.name() + "'");
         addTokenContractAddressAndAbi(tokenAddress, tokenAbi);
@@ -145,6 +138,9 @@ printTxData("crowdsaleAddress=" + crowdsaleAddress, crowdsaleTx);
 printCrowdsaleContractDetails();
 printTokenContractDetails();
 console.log("RESULT: ");
+
+
+exit;
 
 
 // -----------------------------------------------------------------------------
