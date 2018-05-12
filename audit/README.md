@@ -104,11 +104,14 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 
 * [x] Deploy crowdsale contract
   * [x] Deploy token contract
-* [ ] Deploy vesting contract
-* [ ] Contribute to the crowdsale contract
-* [ ] Finalise crowdsale
+* [x] Whitelist accounts
+* [x] Contribute to the crowdsale contract during the 1st whitelist period with amount <= whitelisted amount
+* [x] Contribute to the crowdsale contract during the 1st whitelist period with amount <= whitelisted amount and rejecting double contributions
+* [x] Contribute to the crowdsale contract during the 2nd whitelist period with amount <= 2 x whitelisted amount
+* [x] Contribute to the crowdsale contract after the 2nd whitelist period with no whitelisted amount limits
+* [x] Finalise crowdsale
+* [x] `transfer(...)`, `approve(...)` and `transferFrom(...)`
 * [ ] Transfer tokens to the vesting contract
-* [ ] `transfer(...)`, `approve(...)` and `transferFrom(...)`
 
 <br />
 

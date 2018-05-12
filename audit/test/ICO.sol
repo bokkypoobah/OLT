@@ -102,12 +102,12 @@ contract ICO is Ownable {
         require(initialTime <= now);
         require(whiteList[msg.sender].offeredWei > 0);
         require(weiPaid <= weiCap.sub(weiRaised));
-        // can only purchase once every 24 hours
-        require(now.sub(whiteList[msg.sender].lastPurchasedTimestamp) > 24 hours);
+        // can only purchase once every 30 seconds
+        require(now.sub(whiteList[msg.sender].lastPurchasedTimestamp) > 30 seconds);
         uint256 elapsedTime = now.sub(initialTime);
         // check day 1 buy limit
-        require(elapsedTime > 24 hours || msg.value <= whiteList[msg.sender].offeredWei);
+        require(elapsedTime > 30 seconds || msg.value <= whiteList[msg.sender].offeredWei);
         // check day 2 buy limit
-        require(elapsedTime > 48 hours || msg.value <= whiteList[msg.sender].offeredWei.mul(2));
+        require(elapsedTime > 60 seconds || msg.value <= whiteList[msg.sender].offeredWei.mul(2));
     }
 }
