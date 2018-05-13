@@ -309,7 +309,7 @@ var vestingContract = web3.eth.contract(vestingAbi);
 var vestingTx = null;
 var vestingAddress = null;
 var vestingStart = parseInt(new Date()/1000) + 30;
-var vesting = vestingContract.new(vestingBeneficiary, vestingStart, vestingPeriod, tokensReleasedPerPeriod, {from: contractOwnerAccount, data: vestingBin, gas: 6000000, gasPrice: defaultGasPrice},
+var vesting = vestingContract.new(vestingBeneficiary, vestingStart, vestingPeriod, tokensReleasedPerPeriod, tokenAddress, {from: contractOwnerAccount, data: vestingBin, gas: 6000000, gasPrice: defaultGasPrice},
   function(e, contract) {
     if (!e) {
       if (!contract.address) {
@@ -355,7 +355,7 @@ waitUntil("vesting.startFrom()", vesting.startFrom(), 15);
 var releaseVesting0_Message = "Release Vesting #0";
 // -----------------------------------------------------------------------------
 console.log("RESULT: ---------- " + releaseVesting0_Message + " ----------");
-var releaseVesting0_1Tx = vesting.release(tokenAddress, {from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+var releaseVesting0_1Tx = vesting.release({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
 printBalances();
@@ -373,7 +373,7 @@ waitUntil("vesting.startFrom()+45", vesting.startFrom(), 45);
 var releaseVesting1_Message = "Release Vesting #1";
 // -----------------------------------------------------------------------------
 console.log("RESULT: ---------- " + releaseVesting1_Message + " ----------");
-var releaseVesting1_1Tx = vesting.release(tokenAddress, {from: vestingBeneficiary, gas: 200000, gasPrice: defaultGasPrice});
+var releaseVesting1_1Tx = vesting.release({from: vestingBeneficiary, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
 printBalances();
@@ -391,7 +391,7 @@ waitUntil("vesting.startFrom()+75", vesting.startFrom(), 75);
 var releaseVesting2_Message = "Release Vesting #2";
 // -----------------------------------------------------------------------------
 console.log("RESULT: ---------- " + releaseVesting2_Message + " ----------");
-var releaseVesting2_1Tx = vesting.release(tokenAddress, {from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+var releaseVesting2_1Tx = vesting.release({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
 printBalances();
@@ -410,7 +410,7 @@ var releaseVesting3_Message = "Release Vesting #3";
 // -----------------------------------------------------------------------------
 console.log("RESULT: ---------- " + releaseVesting3_Message + " ----------");
 console.log("RESULT: ");
-var releaseVesting3_1Tx = vesting.release(tokenAddress, {from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+var releaseVesting3_1Tx = vesting.release({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
 printBalances();

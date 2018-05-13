@@ -404,6 +404,7 @@ function printVestingContractDetails() {
     console.log("RESULT: vesting.period=" + contract.period());
     console.log("RESULT: vesting.tokensReleasedPerPeriod=" + contract.tokensReleasedPerPeriod().shift(-18) + " tokens");
     console.log("RESULT: vesting.elapsedPeriods=" + contract.elapsedPeriods());
+    console.log("RESULT: vesting.getToken=" + contract.getToken());
 
     var latestBlock = eth.blockNumber;
     var i;

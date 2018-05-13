@@ -34,6 +34,9 @@ contract OneledgerTokenVesting {
     // BK Ok
     uint256 public elapsedPeriods;
 
+    // BK Ok
+    OneledgerToken private token;
+
     /**
      * @dev Creates a vesting contract for OneledgerToken
      * @param _beneficiary address of the beneficiary to whom vested tokens are transferred
@@ -46,7 +49,8 @@ contract OneledgerTokenVesting {
         address _beneficiary,
         uint256 _startFrom,
         uint256 _period,
-        uint256 _tokensReleasedPerPeriod
+        uint256 _tokensReleasedPerPeriod,
+        OneledgerToken _token
     ) public {
         // BK Ok
         require(_beneficiary != address(0));
@@ -59,15 +63,25 @@ contract OneledgerTokenVesting {
         period = _period;
         tokensReleasedPerPeriod = _tokensReleasedPerPeriod;
         elapsedPeriods = 0;
+        token = _token;
     }
+
+    /**
+     *  @dev getToken this may be more convinience for user
+     *        to check if their vesting contract is binded with a right token
+     * return OneledgerToken
+     */
+     function getToken() public returns(OneledgerToken) {
+       return token;
+     }
 
     /**
      * @dev release
      * param _token Oneledgertoken that will be released to beneficiary
      */
     // BK NOTE - Anyone can call, but the tokens are only transferred to the beneficiary
-    // BK NOTE - An attacker can update `elapsedPeriods` with a different token contract
-    function release(OneledgerToken token) public {
+    // BK Ok
+    function release() public {
         // BK Ok
         require(token.balanceOf(this) >= 0 && now >= startFrom);
         // BK Ok
