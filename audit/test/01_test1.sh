@@ -142,7 +142,7 @@ printTokenContractDetails();
 console.log("RESULT: ");
 
 
-var fullTesting = false;
+var fullTesting = true;
 
 if (fullTesting) {
 // -----------------------------------------------------------------------------
