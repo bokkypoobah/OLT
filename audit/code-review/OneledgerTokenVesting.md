@@ -65,7 +65,8 @@ contract OneledgerTokenVesting {
      * @dev release
      * param _token Oneledgertoken that will be released to beneficiary
      */
-    // BK Ok - Anyone can call, but the tokens are only transferred to the beneficiary
+    // BK NOTE - Anyone can call, but the tokens are only transferred to the beneficiary
+    // BK NOTE - An attacker can update `elapsedPeriods` with a different token contract
     function release(OneledgerToken token) public {
         // BK Ok
         require(token.balanceOf(this) >= 0 && now >= startFrom);

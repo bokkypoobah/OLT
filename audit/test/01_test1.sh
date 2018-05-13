@@ -142,7 +142,7 @@ printTokenContractDetails();
 console.log("RESULT: ");
 
 
-var fullTesting = true;
+var fullTesting = false;
 
 if (fullTesting) {
 // -----------------------------------------------------------------------------
@@ -328,6 +328,94 @@ while (txpool.status.pending > 0) {
 printBalances();
 failIfTxStatusError(vestingTx, deployVesting_Message);
 printTxData("vestingAddress=" + vestingAddress, vestingTx);
+printVestingContractDetails();
+printTokenContractDetails();
+console.log("RESULT: ");
+
+
+// -----------------------------------------------------------------------------
+var transferToVesting1_Message = "Transfer To Vesting Contract";
+// -----------------------------------------------------------------------------
+console.log("RESULT: ---------- " + transferToVesting1_Message + " ----------");
+var transferToVesting1_1Tx = token.transfer(vestingAddress, new BigNumber(150).shift(18), {from: contractOwnerAccount, gas: 100000, gasPrice: defaultGasPrice});
+while (txpool.status.pending > 0) {
+}
+printBalances();
+printTxData("transferToVesting1_1Tx", transferToVesting1_1Tx);
+failIfTxStatusError(transferToVesting1_1Tx, transferToVesting1_Message + " - transfer 150 tokens to vesting contract");
+printVestingContractDetails();
+printTokenContractDetails();
+console.log("RESULT: ");
+
+
+waitUntil("vesting.startFrom()", vesting.startFrom(), 15);
+
+
+// -----------------------------------------------------------------------------
+var releaseVesting0_Message = "Release Vesting #0";
+// -----------------------------------------------------------------------------
+console.log("RESULT: ---------- " + releaseVesting0_Message + " ----------");
+var releaseVesting0_1Tx = vesting.release(tokenAddress, {from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+while (txpool.status.pending > 0) {
+}
+printBalances();
+printTxData("releaseVesting0_1Tx", releaseVesting0_1Tx);
+passIfTxStatusError(releaseVesting0_1Tx, releaseVesting0_Message + " - Expecting failure - 0 tokens released");
+printVestingContractDetails();
+printTokenContractDetails();
+console.log("RESULT: ");
+
+
+waitUntil("vesting.startFrom()+45", vesting.startFrom(), 45);
+
+
+// -----------------------------------------------------------------------------
+var releaseVesting1_Message = "Release Vesting #1";
+// -----------------------------------------------------------------------------
+console.log("RESULT: ---------- " + releaseVesting1_Message + " ----------");
+var releaseVesting1_1Tx = vesting.release(tokenAddress, {from: vestingBeneficiary, gas: 200000, gasPrice: defaultGasPrice});
+while (txpool.status.pending > 0) {
+}
+printBalances();
+printTxData("releaseVesting1_1Tx", releaseVesting1_1Tx);
+failIfTxStatusError(releaseVesting1_1Tx, releaseVesting1_Message + " - Expecting 100 tokens released, executed by beneficiary");
+printVestingContractDetails();
+printTokenContractDetails();
+console.log("RESULT: ");
+
+
+waitUntil("vesting.startFrom()+75", vesting.startFrom(), 75);
+
+
+// -----------------------------------------------------------------------------
+var releaseVesting2_Message = "Release Vesting #2";
+// -----------------------------------------------------------------------------
+console.log("RESULT: ---------- " + releaseVesting2_Message + " ----------");
+var releaseVesting2_1Tx = vesting.release(tokenAddress, {from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+while (txpool.status.pending > 0) {
+}
+printBalances();
+printTxData("releaseVesting2_1Tx", releaseVesting2_1Tx);
+failIfTxStatusError(releaseVesting2_1Tx, releaseVesting2_Message + " - Expecting 50 tokens released, executed by another account");
+printVestingContractDetails();
+printTokenContractDetails();
+console.log("RESULT: ");
+
+
+waitUntil("vesting.startFrom()+105", vesting.startFrom(), 105);
+
+
+// -----------------------------------------------------------------------------
+var releaseVesting3_Message = "Release Vesting #3";
+// -----------------------------------------------------------------------------
+console.log("RESULT: ---------- " + releaseVesting3_Message + " ----------");
+console.log("RESULT: ");
+var releaseVesting3_1Tx = vesting.release(tokenAddress, {from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+while (txpool.status.pending > 0) {
+}
+printBalances();
+printTxData("releaseVesting3_1Tx", releaseVesting3_1Tx);
+passIfTxStatusError(releaseVesting3_1Tx, releaseVesting3_Message + " - Expecting failure");
 printVestingContractDetails();
 printTokenContractDetails();
 console.log("RESULT: ");
