@@ -35,7 +35,6 @@ TODO - Check that no potential vulnerabilities have been identified in the crowd
 
 * [ ] **HIGH IMPORTANCE** A malicious third party can call `OneledgerTokenVesting.release(...)` with a token contract other than the real *OLT* token contract and deny the beneficiaries from ever receiving the real *OLT* tokens, as the `elapsedPeriods` variable can be made to update with the incorrect token contract
 * [ ] **LOW IMPORTANCE** `OneledgerToken.decimals` returns the `uint256` data type instead of `uint8` as recommended in the [ERC20 token standard]
-* [ ] **VERY LOW IMPORTANCE** Where convenient, it is safer to use *Claimable* instead of *Ownable* when ownership of contracts need to be transferred. It is not too important for the ICO contract as this contract has a short life anyway. It is not important for the token contract as the token contract ownership does not any ability other than to execute the `activate()` function right after the crowdsale is completed. And the vesting contract does not need the *Ownable* ownership
 
 <br />
 
