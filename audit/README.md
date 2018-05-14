@@ -12,7 +12,7 @@ This audit has been conducted on OneLedger's source code in commits
 [ea16049](https://github.com/Oneledger/OLT/commit/ea160497e62fa84ac5d057ecaf3a43175f4d0d00) and
 [df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a).
 
-TODO - Check that no potential vulnerabilities have been identified in the crowdsale and token contracts.
+No potential vulnerabilities have been identified in the crowdsale, token and vesting contracts.
 
 <br />
 
@@ -51,7 +51,7 @@ TODO - Check that no potential vulnerabilities have been identified in the crowd
 
 ## Potential Vulnerabilities
 
-TODO - Check that no potential vulnerabilities have been identified in the crowdsale and token contracts.
+No potential vulnerabilities have been identified in the crowdsale, token and vesting contracts.
 
 <br />
 
@@ -98,7 +98,11 @@ matches the audited source code, and that the deployment parameters are correctl
 
 ## Risks
 
-TODO
+Ethers contributed to the crowdsale contract are transferred directly to the crowdsale wallet, and tokens are generated for the contributing account. This reduces the severity of any attacks on the crowdsale contract.
+
+The token contract is a simple extension of the OpenZeppelin library token contract that is used by many other tokens.
+
+Once the vesting contract is deployed, and tokens transferred to the vesting contract, only the beneficiary or the vesting contract owner is able to execute the token release function when the tokens are vested.
 
 <br />
 
@@ -118,11 +122,13 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 * [x] Contribute to the crowdsale contract during the 1st whitelist period with amount <= whitelisted amount and rejecting double contributions
 * [x] Contribute to the crowdsale contract during the 2nd whitelist period with amount <= 2 x whitelisted amount
 * [x] Contribute to the crowdsale contract after the 2nd whitelist period with no whitelisted amount limits
+* [x] Crowdsale owner mint tokens
 * [x] Finalise crowdsale
 * [x] `transfer(...)`, `approve(...)` and `transferFrom(...)`
 * [x] Deploy vesting contract
 * [x] Transfer tokens to the vesting contract
-* [x] Check vesting contract releases tokens
+* [x] Beneficiary execute vesting token release function
+* [x] Vesting contract owner execute vesting token release function
 
 <br />
 
@@ -285,6 +291,6 @@ token/ERC20/MintableToken.sol:45:5: Warning: Invoking events without "emit" pref
 
 <br />
 
-(c) BokkyPooBah / Bok Consulting Pty Ltd for OneLedger - May 13 2018. The MIT Licence.
+(c) BokkyPooBah / Bok Consulting Pty Ltd for OneLedger - May 15 2018. The MIT Licence.
 
 [ERC20 token standard]: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md

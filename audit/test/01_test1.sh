@@ -258,17 +258,20 @@ console.log("RESULT: ");
 var finalise_Message = "Finalise And Activate Token Transfers";
 // -----------------------------------------------------------------------------
 console.log("RESULT: ---------- " + finalise_Message + " ----------");
-var finalise_1Tx = crowdsale.closeSale({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+var finalise_1Tx = crowdsale.mintToken(account11, new BigNumber("123456789").shift(18), {from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+var finalise_2Tx = crowdsale.closeSale({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
-var finalise_2Tx = token.activate({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
+var finalise_3Tx = token.activate({from: contractOwnerAccount, gas: 200000, gasPrice: defaultGasPrice});
 while (txpool.status.pending > 0) {
 }
 printBalances();
-failIfTxStatusError(finalise_1Tx, finalise_Message + " - Close sale");
-failIfTxStatusError(finalise_2Tx, finalise_Message + " - Activate token transfer");
+failIfTxStatusError(finalise_1Tx, finalise_Message + " - crowdsale.mintToken(ac11, 123456789 tokens)");
+failIfTxStatusError(finalise_2Tx, finalise_Message + " - Close sale");
+failIfTxStatusError(finalise_3Tx, finalise_Message + " - Activate token transfer");
 printTxData("finalise_1Tx", finalise_1Tx);
 printTxData("finalise_2Tx", finalise_2Tx);
+printTxData("finalise_3Tx", finalise_3Tx);
 printCrowdsaleContractDetails();
 printTokenContractDetails();
 console.log("RESULT: ");
@@ -396,7 +399,7 @@ while (txpool.status.pending > 0) {
 }
 printBalances();
 printTxData("releaseVesting2_1Tx", releaseVesting2_1Tx);
-failIfTxStatusError(releaseVesting2_1Tx, releaseVesting2_Message + " - Expecting 50 tokens released, executed by another account");
+failIfTxStatusError(releaseVesting2_1Tx, releaseVesting2_Message + " - Expecting 50 tokens released, executed by contract owner account");
 printVestingContractDetails();
 printTokenContractDetails();
 console.log("RESULT: ");
