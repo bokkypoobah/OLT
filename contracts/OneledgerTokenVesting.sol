@@ -2,8 +2,9 @@ pragma solidity 0.4.23;
 
 import "./OneledgerToken.sol";
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
+import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 
-contract OneledgerTokenVesting {
+contract OneledgerTokenVesting is Ownable{
     using SafeMath for uint256;
 
     event Released(uint256 amount);
@@ -49,7 +50,7 @@ contract OneledgerTokenVesting {
      *        to check if their vesting contract is binded with a right token
      * return OneledgerToken
      */
-     function getToken() public returns(OneledgerToken) {
+     function getToken() public view returns(OneledgerToken) {
        return token;
      }
 
@@ -58,6 +59,7 @@ contract OneledgerTokenVesting {
      * param _token Oneledgertoken that will be released to beneficiary
      */
     function release() public {
+        require(msg.sender == owner || msg.sender == beneficiary);
         require(token.balanceOf(this) >= 0 && now >= startFrom);
         uint256 elapsedTime = now.sub(startFrom);
         uint256 periodsInCurrentRelease = elapsedTime.div(period).sub(elapsedPeriods);
