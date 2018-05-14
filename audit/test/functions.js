@@ -399,6 +399,7 @@ function printVestingContractDetails() {
   console.log("RESULT: vestingContractAddress=" + vestingContractAddress);
   if (vestingContractAddress != null && vestingContractAbi != null) {
     var contract = eth.contract(vestingContractAbi).at(vestingContractAddress);
+    console.log("RESULT: vesting.owner=" + contract.owner());
     console.log("RESULT: vesting.beneficiary=" + contract.beneficiary());
     console.log("RESULT: vesting.startFrom=" + contract.startFrom() + " " + new Date(contract.startFrom() * 1000).toUTCString() + " " + new Date(contract.startFrom() * 1000).toString());
     console.log("RESULT: vesting.period=" + contract.period());

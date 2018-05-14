@@ -8,8 +8,9 @@ Bok Consulting Pty Ltd was commissioned to perform an audit on the Ethereum smar
 
 This audit has been conducted on OneLedger's source code in commits
 [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62),
-[f1c5bb7](https://github.com/Oneledger/OLT/commit/f1c5bb7a439782a85204e9764598d695649098f4) and
-[ea16049](https://github.com/Oneledger/OLT/commit/ea160497e62fa84ac5d057ecaf3a43175f4d0d00).
+[f1c5bb7](https://github.com/Oneledger/OLT/commit/f1c5bb7a439782a85204e9764598d695649098f4),
+[ea16049](https://github.com/Oneledger/OLT/commit/ea160497e62fa84ac5d057ecaf3a43175f4d0d00) and
+[df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a).
 
 TODO - Check that no potential vulnerabilities have been identified in the crowdsale and token contracts.
 
@@ -37,9 +38,12 @@ TODO - Check that no potential vulnerabilities have been identified in the crowd
 
 * [x] **HIGH IMPORTANCE** A malicious third party can call `OneledgerTokenVesting.release(...)` with a token contract other than the real *OLT* token contract and deny the beneficiaries from ever receiving the real *OLT* tokens, as the `elapsedPeriods` variable can be made to update with the incorrect token contract
   * [x] Fixed in [ea16049](https://github.com/Oneledger/OLT/commit/ea160497e62fa84ac5d057ecaf3a43175f4d0d00)
-* [ ] **MEDIUM IMPORTANCE** To improve the security on the *OneledgerTokenVesting* contract, derive this class from *Ownable* and add `require(msg.sender == owner || msg.sender == beneficiary);` to  `OneledgerTokenVesting.release(...)`
-* [ ] **LOW IMPORTANCE** `OneledgerTokenVesting.getToken()` should be made a `view` function, or remove `getToken()` and make `token` public
-* [ ] **LOW IMPORTANCE** `OneledgerToken.decimals` returns the `uint256` data type instead of `uint8` as recommended in the [ERC20 token standard]
+* [x] **MEDIUM IMPORTANCE** To improve the security on the *OneledgerTokenVesting* contract, derive this class from *Ownable* and add `require(msg.sender == owner || msg.sender == beneficiary);` to  `OneledgerTokenVesting.release(...)`
+  * [x] Updated in [df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a)
+* [x] **LOW IMPORTANCE** `OneledgerTokenVesting.getToken()` should be made a `view` function, or remove `getToken()` and make `token` public
+  * [x] Fixed in [df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a)
+* [x] **LOW IMPORTANCE** `OneledgerToken.decimals` returns the `uint256` data type instead of `uint8` as recommended in the [ERC20 token standard]
+  * [x] Fixed in [df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a)
 
 <br />
 

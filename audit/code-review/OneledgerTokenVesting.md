@@ -10,12 +10,13 @@ Source file [../../contracts/OneledgerTokenVesting.sol](../../contracts/Oneledge
 // BK Ok
 pragma solidity 0.4.23;
 
-// BK Next 2 Ok
+// BK Next 3 Ok
 import "./OneledgerToken.sol";
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
+import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 
 // BK Ok
-contract OneledgerTokenVesting {
+contract OneledgerTokenVesting is Ownable{
     // BK Ok
     using SafeMath for uint256;
 
@@ -71,7 +72,7 @@ contract OneledgerTokenVesting {
      *        to check if their vesting contract is binded with a right token
      * return OneledgerToken
      */
-     function getToken() public returns(OneledgerToken) {
+     function getToken() public view returns(OneledgerToken) {
        return token;
      }
 
@@ -82,6 +83,8 @@ contract OneledgerTokenVesting {
     // BK NOTE - Anyone can call, but the tokens are only transferred to the beneficiary
     // BK Ok
     function release() public {
+        // BK Ok
+        require(msg.sender == owner || msg.sender == beneficiary);
         // BK Ok
         require(token.balanceOf(this) >= 0 && now >= startFrom);
         // BK Ok

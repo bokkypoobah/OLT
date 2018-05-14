@@ -27,8 +27,8 @@ contract OneledgerToken is MintableToken {
     // BK Next 2 Ok
     string public name = "Oneledger Token";
     string public symbol = "OLT";
-    // BK NOTE - `decimals` should be uint8 instead of `uint256`, from the ERC20 standard
-    uint256 public decimals = 18;
+    // BK Ok
+    uint8 public decimals = 18;
     // BK Ok
     bool public active = false;
     /**
