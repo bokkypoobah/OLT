@@ -9,8 +9,9 @@ Bok Consulting Pty Ltd was commissioned to perform an audit on the Ethereum smar
 This audit has been conducted on OneLedger's source code in commits
 [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62),
 [f1c5bb7](https://github.com/Oneledger/OLT/commit/f1c5bb7a439782a85204e9764598d695649098f4),
-[ea16049](https://github.com/Oneledger/OLT/commit/ea160497e62fa84ac5d057ecaf3a43175f4d0d00) and
-[df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a).
+[ea16049](https://github.com/Oneledger/OLT/commit/ea160497e62fa84ac5d057ecaf3a43175f4d0d00),
+[df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a) and
+[c88c6c4](https://github.com/Oneledger/OLT/commit/c88c6c4dcfe30ec111abd1dcfb4b1c5427231148).
 
 No potential vulnerabilities have been identified in the crowdsale, token and vesting contracts.
 

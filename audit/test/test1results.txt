@@ -20,8 +20,8 @@
 ---------- Deploy Crowdsale Contract ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.015768336000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.015768336000000000           0.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016060016000000000           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016060016000000000           0.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.000000000000000000           0.000000000000000000 Account #2 - Wallet
  3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3 - Whitelisted 10 ETH
  4 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4 - Whitelisted 10 ETH
@@ -32,26 +32,26 @@
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                                     0.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
 PASS Deploy Crowdsale Contract
-crowdsaleAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0 status=0x1 Success gas=6000000 gasUsed=1971042 costETH=0.015768336 costUSD=10.3550662512 @ ETH/USD=656.7 gasPrice=8 gwei block=1705 txIx=0 txId=0x49c1ee4c1ac51e7db25b7055ca59f6ad89aec1324a63f3befb4aabab9b6f040b @ 1526308907 Mon, 14 May 2018 14:41:47 UTC
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+crowdsaleAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688 status=0x1 Success gas=6000000 gasUsed=2007502 costETH=0.016060016 costUSD=10.5466125072 @ ETH/USD=656.7 gasPrice=8 gwei block=26 txIx=0 txId=0x04f345be0bc9c16664702237e79b96f9574d58f3b6083002b99313ed8dbfbabc @ 1527082255 Wed, 23 May 2018 13:30:55 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
 crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=false
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=0 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
-token.owner=0x938d22c583154e944cc0f6e83749261d88bf01f0
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+token.owner=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 token.symbol=OLT
 token.name=Oneledger Token
 token.decimals=18
@@ -62,8 +62,8 @@ token.active=false
 ---------- Whitelist Accounts - ac3 and ac4 for 10 ETH each ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016380016000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016380016000000000           0.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016671696000000000           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016671696000000000           0.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.000000000000000000           0.000000000000000000 Account #2 - Wallet
  3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3 - Whitelisted 10 ETH
  4 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4 - Whitelisted 10 ETH
@@ -74,26 +74,26 @@ token.active=false
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                                     0.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
 PASS Whitelist Accounts - ac3 and ac4 for 10 ETH each
-whitelist1_1Tx status=0x1 Success gas=100000 gasUsed=76460 costETH=0.00061168 costUSD=0.401690256 @ ETH/USD=656.7 gasPrice=8 gwei block=1708 txIx=0 txId=0xeab5f7a5f52386f2257b4b4eac1334ad8d70510455af11f159e36491a4ce41bf @ 1526308910 Mon, 14 May 2018 14:41:50 UTC
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+whitelist1_1Tx status=0x1 Success gas=100000 gasUsed=76460 costETH=0.00061168 costUSD=0.401690256 @ ETH/USD=656.7 gasPrice=8 gwei block=29 txIx=0 txId=0xbb609fe15b6c4f428c32892fb80316fc71c06f7e09428642ad4c27f61784e5a3 @ 1527082258 Wed, 23 May 2018 13:30:58 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
 crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=false
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=0 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
-token.owner=0x938d22c583154e944cc0f6e83749261d88bf01f0
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+token.owner=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 token.symbol=OLT
 token.name=Oneledger Token
 token.decimals=18
@@ -101,234 +101,277 @@ token.totalSupply=0
 token.mintingFinished=false
 token.active=false
 
-Waiting until 'crowdsale.initialTime' at 1526308924+0s=Tue, 15 May 2018 00:42:05 AEST now=Tue, 15 May 2018 00:41:51 AEST
-Waited until 'crowdsale.initialTime' at at 1526308924+0s=Tue, 15 May 2018 00:42:05 AEST now=Tue, 15 May 2018 00:42:05 AEST
-
----------- Send Contribution #0 ----------
+---------- Update Rate ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.017719648000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016380016000000000           0.000000000000000000 Account #1 - Contract Owner
- 2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.500000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0       -0.500976088000000000         500.000000000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844       -0.000188344000000000           0.000000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000175200000000000           0.000000000000000000 Account #5 - Not Whitelisted
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016898728000000000           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016898728000000000           0.000000000000000000 Account #1 - Contract Owner
+ 2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.000000000000000000           0.000000000000000000 Account #2 - Wallet
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
-                                                                                  500.000000000000000000 Total Token Balances
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+PASS Update Rate
+updateRate_1Tx status=0x1 Success gas=100000 gasUsed=28379 costETH=0.000227032 costUSD=0.1490919144 @ ETH/USD=656.7 gasPrice=8 gwei block=32 txIx=0 txId=0x2961bc71b4f8f1deae8e232e85ae6a654d4a4074993de790f67398771060654a @ 1527082261 Wed, 23 May 2018 13:31:01 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
+crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
+crowdsale.rate=1007
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
+crowdsale.saleClosed=false
+crowdsale.weiCap=2000 ETH
+crowdsale.weiRaised=0 ETH
+crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
+UpdateRate 0 #32 {"rate":"1007"}
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+token.owner=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
+token.symbol=OLT
+token.name=Oneledger Token
+token.decimals=18
+token.totalSupply=0
+token.mintingFinished=false
+token.active=false
+
+Waiting until 'crowdsale.initialTime' at 1527082265+0s=Wed, 23 May 2018 23:31:06 AEST now=Wed, 23 May 2018 23:31:02 AEST
+Waited until 'crowdsale.initialTime' at at 1527082265+0s=Wed, 23 May 2018 23:31:06 AEST now=Wed, 23 May 2018 23:31:06 AEST
+
+---------- Send Contribution #0 ----------
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016898728000167454           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016898728000000000           0.000000000000000000 Account #1 - Contract Owner
+ 2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.500000000000000000           0.000000000000000000 Account #2 - Wallet
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0       -0.500000000000122011         503.500000000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844       -0.000000000000023543           0.000000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000021900           0.000000000000000000 Account #5 - Not Whitelisted
+ 6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+ 9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
+10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
+11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                  503.500000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
 PASS Send Contribution #0 - ac3 0.5 ETH
 PASS Send Contribution #0 - ac4 15 ETH - Expecting failure as amount over whitelisted limit
 PASS Send Contribution #0 - ac5 0.5 ETH - Expecting failure as account not whitelisted
-sendContribution0_1Tx status=0x1 Success gas=400000 gasUsed=122011 costETH=0.000976088 costUSD=0.6409969896 @ ETH/USD=656.7 gasPrice=8 gwei block=1725 txIx=1 txId=0x26a152a205d961338aa746846301b15814498deb2f519065faae757b99f0eb2d @ 1526308927 Mon, 14 May 2018 14:42:07 UTC
-sendContribution0_2Tx status=0x0 Failure gas=400000 gasUsed=23543 costETH=0.000188344 costUSD=0.1236855048 @ ETH/USD=656.7 gasPrice=8 gwei block=1725 txIx=0 txId=0x82efdb435ff2a2999ae5a11b174f5d07acc51cc72a3b6a7a777c36e113880d0a @ 1526308927 Mon, 14 May 2018 14:42:07 UTC
-sendContribution0_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=0.0001752 costUSD=0.11505384 @ ETH/USD=656.7 gasPrice=8 gwei block=1725 txIx=2 txId=0xd82834f1b3cbe92b657f1de2dcffd8d9430217162d3832b25f36e6f81c983853 @ 1526308927 Mon, 14 May 2018 14:42:07 UTC
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+sendContribution0_1Tx status=0x1 Success gas=400000 gasUsed=122011 costETH=1.22011e-13 costUSD=8.01246237e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=39 txIx=0 txId=0xa67ed950fcffc1739a9781b82e7a6d76816e42c2b387b6c10eeb0ddc8f4a7a29 @ 1527082268 Wed, 23 May 2018 13:31:08 UTC
+sendContribution0_2Tx status=0x0 Failure gas=400000 gasUsed=23543 costETH=2.3543e-14 costUSD=1.54606881e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=39 txIx=2 txId=0xbb09342173a541bed49b11af12fbbaea67112d5481d51441a6ea02f18fba6385 @ 1527082268 Wed, 23 May 2018 13:31:08 UTC
+sendContribution0_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=2.19e-14 costUSD=1.438173e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=39 txIx=1 txId=0xa857dcd7a837f9f8a16b97c5fd621ee9a9a219cc3cdf7efaa6dffb1efe7d027a @ 1527082268 Wed, 23 May 2018 13:31:08 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
-crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.rate=1007
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=false
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=0.5 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-BuyTokens 0 #1725 beneficiary=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0; weiAmount0.5 ETH; rate=1000; token=500 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
-token.owner=0x938d22c583154e944cc0f6e83749261d88bf01f0
+BuyTokens 0 #39 beneficiary=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0; weiAmount0.5 ETH; rate=1007; token=503.5 tokens
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+token.owner=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 token.symbol=OLT
 token.name=Oneledger Token
 token.decimals=18
-token.totalSupply=500
+token.totalSupply=503.5
 token.mintingFinished=false
 token.active=false
-Mint 0 #1725 {"amount":"500000000000000000000","to":"0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0"}
-Transfer 0 #1725: from=0x0000000000000000000000000000000000000000 to=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 value=500
+Mint 0 #39 {"amount":"503500000000000000000","to":"0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0"}
+Transfer 0 #39: from=0x0000000000000000000000000000000000000000 to=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 value=503.5
 
 ---------- Send Contribution #1 ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.018813776000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016380016000000000           0.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016898728000304220           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016898728000000000           0.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        1.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0       -0.501158928000000000         500.000000000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844       -0.500924432000000000         500.000000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000350400000000000           0.000000000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0       -0.500000000000144866         503.500000000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844       -0.500000000000115554         503.500000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000043800           0.000000000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
-                                                                                 1000.000000000000000000 Total Token Balances
+                                                                                 1007.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
 PASS Send Contribution #1 - ac3 0.5 ETH - Expecting failure as account already contributed in 1st period
 PASS Send Contribution #1 - ac4 0.5 ETH
 PASS Send Contribution #1 - ac5 0.5 ETH - Expecting failure as account not whitelisted
-sendContribution1_1Tx status=0x0 Failure gas=400000 gasUsed=22855 costETH=0.00018284 costUSD=0.120071028 @ ETH/USD=656.7 gasPrice=8 gwei block=1728 txIx=1 txId=0x6345b09721d2fe01f00599c3b29a78a515ea759c505253fad364f8950743e1f6 @ 1526308930 Mon, 14 May 2018 14:42:10 UTC
-sendContribution1_2Tx status=0x1 Success gas=400000 gasUsed=92011 costETH=0.000736088 costUSD=0.4833889896 @ ETH/USD=656.7 gasPrice=8 gwei block=1728 txIx=0 txId=0xa9e24420f1dded7045faccae53214110f63190b50cb5a8514584f455b26e6c79 @ 1526308930 Mon, 14 May 2018 14:42:10 UTC
-sendContribution1_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=0.0001752 costUSD=0.11505384 @ ETH/USD=656.7 gasPrice=8 gwei block=1728 txIx=2 txId=0x7a7253e11512c22d01284d6044fb87ecff76af5f8db8adeae58b349f65eb820d @ 1526308930 Mon, 14 May 2018 14:42:10 UTC
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+sendContribution1_1Tx status=0x0 Failure gas=400000 gasUsed=22855 costETH=2.2855e-14 costUSD=1.50088785e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=42 txIx=0 txId=0x88026027ea0b9740e53b93cebadd7f309b2bb0a5eab0f8adb9eff3b07aea1c1c @ 1527082271 Wed, 23 May 2018 13:31:11 UTC
+sendContribution1_2Tx status=0x1 Success gas=400000 gasUsed=92011 costETH=9.2011e-14 costUSD=6.04236237e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=42 txIx=2 txId=0x0d25916ea433058164a1d00ff52f17139c149480aad61ff1dd4d946b76b24118 @ 1527082271 Wed, 23 May 2018 13:31:11 UTC
+sendContribution1_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=2.19e-14 costUSD=1.438173e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=42 txIx=1 txId=0x25601ae5e053e0c6993d6721c7aa2048f2e37d00cfd50929d82ea43bd0fd827a @ 1527082271 Wed, 23 May 2018 13:31:11 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
-crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.rate=1007
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=false
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=1 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-BuyTokens 0 #1728 beneficiary=0xa44a08d3f6933c69212114bb66e2df1813651844; weiAmount0.5 ETH; rate=1000; token=500 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
-token.owner=0x938d22c583154e944cc0f6e83749261d88bf01f0
+BuyTokens 0 #42 beneficiary=0xa44a08d3f6933c69212114bb66e2df1813651844; weiAmount0.5 ETH; rate=1007; token=503.5 tokens
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+token.owner=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 token.symbol=OLT
 token.name=Oneledger Token
 token.decimals=18
-token.totalSupply=1000
+token.totalSupply=1007
 token.mintingFinished=false
 token.active=false
-Mint 0 #1728 {"amount":"500000000000000000000","to":"0xa44a08d3f6933c69212114bb66e2df1813651844"}
-Transfer 0 #1728: from=0x0000000000000000000000000000000000000000 to=0xa44a08d3f6933c69212114bb66e2df1813651844 value=500
+Mint 0 #42 {"amount":"503500000000000000000","to":"0xa44a08d3f6933c69212114bb66e2df1813651844"}
+Transfer 0 #42: from=0x0000000000000000000000000000000000000000 to=0xa44a08d3f6933c69212114bb66e2df1813651844 value=503.5
 
-Waiting until 'crowdsale.initialTime + 1 period + contribution#1 mined time' at 1526308924+45s=Tue, 15 May 2018 00:42:50 AEST now=Tue, 15 May 2018 00:42:11 AEST
-Waited until 'crowdsale.initialTime + 1 period + contribution#1 mined time' at at 1526308924+45s=Tue, 15 May 2018 00:42:50 AEST now=Tue, 15 May 2018 00:42:50 AEST
+Waiting until 'crowdsale.initialTime + 1 period + contribution#1 mined time' at 1527082265+45s=Wed, 23 May 2018 23:31:51 AEST now=Wed, 23 May 2018 23:31:12 AEST
+Waited until 'crowdsale.initialTime + 1 period + contribution#1 mined time' at at 1527082265+45s=Wed, 23 May 2018 23:31:51 AEST now=Wed, 23 May 2018 23:31:51 AEST
 
 ---------- Send Contribution #2 - Up to 2 x whitelisted limit ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.019975456000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016380016000000000           0.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016898728000449430           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016898728000000000           0.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976       41.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0      -20.501652168000000000       20500.000000000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844      -20.501417672000000000       20500.000000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000525600000000000           0.000000000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0      -20.500000000000206521       20643.500000000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844      -20.500000000000177209       20643.500000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000065700           0.000000000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
-                                                                                41000.000000000000000000 Total Token Balances
+                                                                                41287.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
 PASS Send Contribution #2 - Up to 2 x whitelisted limit - ac3 20 ETH
 PASS Send Contribution #2 - Up to 2 x whitelisted limit - ac4 20 ETH
 PASS Send Contribution #2 - Up to 2 x whitelisted limit - ac5 0.5 ETH - Expecting failure as account not whitelisted
-sendContribution2_1Tx status=0x1 Success gas=400000 gasUsed=61655 costETH=0.00049324 costUSD=0.323910708 @ ETH/USD=656.7 gasPrice=8 gwei block=1770 txIx=0 txId=0x25e8d4f8d3f92c99dd9f1dd8d0462e3ccfb6c5307105c4336120b2fcaf92dca5 @ 1526308972 Mon, 14 May 2018 14:42:52 UTC
-sendContribution2_2Tx status=0x1 Success gas=400000 gasUsed=61655 costETH=0.00049324 costUSD=0.323910708 @ ETH/USD=656.7 gasPrice=8 gwei block=1770 txIx=2 txId=0xd64c7832f02cbd077a5c4d9fa6d71429cdea9714debb732bcd2d13992784f26d @ 1526308972 Mon, 14 May 2018 14:42:52 UTC
-sendContribution2_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=0.0001752 costUSD=0.11505384 @ ETH/USD=656.7 gasPrice=8 gwei block=1770 txIx=1 txId=0x37ebcf77c81844ba4a8bac5c68ab269ed0379bddf3fdfef80b625fe8aa47f422 @ 1526308972 Mon, 14 May 2018 14:42:52 UTC
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+sendContribution2_1Tx status=0x1 Success gas=400000 gasUsed=61655 costETH=6.1655e-14 costUSD=4.04888385e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=84 txIx=0 txId=0x4a415f217dfb135a8e3747fd8540825c7fc4dd6faf8a61751df4517118007723 @ 1527082313 Wed, 23 May 2018 13:31:53 UTC
+sendContribution2_2Tx status=0x1 Success gas=400000 gasUsed=61655 costETH=6.1655e-14 costUSD=4.04888385e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=84 txIx=2 txId=0x0eeff244f0e9b349f1c0dbfdef4a15cd4123339cf497c398ba508d791555f104 @ 1527082313 Wed, 23 May 2018 13:31:53 UTC
+sendContribution2_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=2.19e-14 costUSD=1.438173e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=84 txIx=1 txId=0x35c81edc7612428d0f4c8638e352dcd429cfdc6c7514510ed005cc66fad9a404 @ 1527082313 Wed, 23 May 2018 13:31:53 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
-crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.rate=1007
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=false
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=41 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-BuyTokens 0 #1770 beneficiary=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0; weiAmount20 ETH; rate=1000; token=20000 tokens
-BuyTokens 1 #1770 beneficiary=0xa44a08d3f6933c69212114bb66e2df1813651844; weiAmount20 ETH; rate=1000; token=20000 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
-token.owner=0x938d22c583154e944cc0f6e83749261d88bf01f0
+BuyTokens 0 #84 beneficiary=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0; weiAmount20 ETH; rate=1007; token=20140 tokens
+BuyTokens 1 #84 beneficiary=0xa44a08d3f6933c69212114bb66e2df1813651844; weiAmount20 ETH; rate=1007; token=20140 tokens
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+token.owner=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 token.symbol=OLT
 token.name=Oneledger Token
 token.decimals=18
-token.totalSupply=41000
+token.totalSupply=41287
 token.mintingFinished=false
 token.active=false
-Mint 0 #1770 {"amount":"2e+22","to":"0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0"}
-Mint 1 #1770 {"amount":"2e+22","to":"0xa44a08d3f6933c69212114bb66e2df1813651844"}
-Transfer 0 #1770: from=0x0000000000000000000000000000000000000000 to=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 value=20000
-Transfer 1 #1770: from=0x0000000000000000000000000000000000000000 to=0xa44a08d3f6933c69212114bb66e2df1813651844 value=20000
+Mint 0 #84 {"amount":"2.014e+22","to":"0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0"}
+Mint 1 #84 {"amount":"2.014e+22","to":"0xa44a08d3f6933c69212114bb66e2df1813651844"}
+Transfer 0 #84: from=0x0000000000000000000000000000000000000000 to=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 value=20140
+Transfer 1 #84: from=0x0000000000000000000000000000000000000000 to=0xa44a08d3f6933c69212114bb66e2df1813651844 value=20140
 
-Waiting until 'crowdsale.initialTime + 2 period + contribution#2 mined time' at 1526308924+80s=Tue, 15 May 2018 00:43:25 AEST now=Tue, 15 May 2018 00:42:54 AEST
-Waited until 'crowdsale.initialTime + 2 period + contribution#2 mined time' at at 1526308924+80s=Tue, 15 May 2018 00:43:25 AEST now=Tue, 15 May 2018 00:43:25 AEST
+Waiting until 'crowdsale.initialTime + 2 period + contribution#2 mined time' at 1527082265+80s=Wed, 23 May 2018 23:32:26 AEST now=Wed, 23 May 2018 23:31:54 AEST
+Waited until 'crowdsale.initialTime + 2 period + contribution#2 mined time' at at 1527082265+80s=Wed, 23 May 2018 23:32:26 AEST now=Wed, 23 May 2018 23:32:26 AEST
 
 ---------- Send Contribution #3 - Outside whitelisted ETH limits ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.021128992000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016380016000000000           0.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.016898728000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.016898728000000000           0.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502141336000000000      120500.000000000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.501906840000000000      120500.000000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000000000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500000000000267667      121343.500000000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500000000000238355      121343.500000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000000000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000           0.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
-                                                                               241000.000000000000000000 Total Token Balances
+                                                                               242687.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
 PASS Send Contribution #3 - Outside whitelisted ETH limits - ac3 100 ETH
 PASS Send Contribution #3 - Outside whitelisted ETH limits - ac4 100 ETH
 PASS Send Contribution #3 - Outside whitelisted ETH limits - ac5 100 ETH - Expecting failure as account not whitelisted
-sendContribution3_1Tx status=0x1 Success gas=400000 gasUsed=61146 costETH=0.000489168 costUSD=0.3212366256 @ ETH/USD=656.7 gasPrice=8 gwei block=1805 txIx=2 txId=0xfc64b90d838e8f96a0aeb9252962923e6ff084a7ca4071f30f266c17d345134c @ 1526309007 Mon, 14 May 2018 14:43:27 UTC
-sendContribution3_2Tx status=0x1 Success gas=400000 gasUsed=61146 costETH=0.000489168 costUSD=0.3212366256 @ ETH/USD=656.7 gasPrice=8 gwei block=1805 txIx=1 txId=0x3a89d7abe0352424f4b4aab3e164c630782575175dc7fd48bd01620ec568717d @ 1526309007 Mon, 14 May 2018 14:43:27 UTC
-sendContribution3_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=0.0001752 costUSD=0.11505384 @ ETH/USD=656.7 gasPrice=8 gwei block=1805 txIx=0 txId=0x1de39c0b31770e3b20f5104c012fda6cf1e2bc267b30df47c28a32bafefe5a35 @ 1526309007 Mon, 14 May 2018 14:43:27 UTC
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+sendContribution3_1Tx status=0x1 Success gas=400000 gasUsed=61146 costETH=6.1146e-14 costUSD=4.01545782e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=119 txIx=1 txId=0x93dbd55ed48904440b6c6d5ffb91a7996a85713b812b64425fc0f2507e547cc6 @ 1527082348 Wed, 23 May 2018 13:32:28 UTC
+sendContribution3_2Tx status=0x1 Success gas=400000 gasUsed=61146 costETH=6.1146e-14 costUSD=4.01545782e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=119 txIx=0 txId=0x41330932b278533d1e6b8c1c85d706e681f4bbac777af2186cf0c5e936e0797a @ 1527082348 Wed, 23 May 2018 13:32:28 UTC
+sendContribution3_3Tx status=0x0 Failure gas=400000 gasUsed=21900 costETH=2.19e-14 costUSD=1.438173e-11 @ ETH/USD=656.7 gasPrice=1e-9 gwei block=119 txIx=2 txId=0x5a36f575cdfb42bfd17b3b41077665dbadd82b8aaae4bddd872b3cb0b9fd85be @ 1527082348 Wed, 23 May 2018 13:32:28 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
-crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.rate=1007
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=false
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=241 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-BuyTokens 0 #1805 beneficiary=0xa44a08d3f6933c69212114bb66e2df1813651844; weiAmount100 ETH; rate=1000; token=100000 tokens
-BuyTokens 1 #1805 beneficiary=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0; weiAmount100 ETH; rate=1000; token=100000 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
-token.owner=0x938d22c583154e944cc0f6e83749261d88bf01f0
+BuyTokens 0 #119 beneficiary=0xa44a08d3f6933c69212114bb66e2df1813651844; weiAmount100 ETH; rate=1007; token=100700 tokens
+BuyTokens 1 #119 beneficiary=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0; weiAmount100 ETH; rate=1007; token=100700 tokens
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+token.owner=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 token.symbol=OLT
 token.name=Oneledger Token
 token.decimals=18
-token.totalSupply=241000
+token.totalSupply=242687
 token.mintingFinished=false
 token.active=false
-Mint 0 #1805 {"amount":"1e+23","to":"0xa44a08d3f6933c69212114bb66e2df1813651844"}
-Mint 1 #1805 {"amount":"1e+23","to":"0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0"}
-Transfer 0 #1805: from=0x0000000000000000000000000000000000000000 to=0xa44a08d3f6933c69212114bb66e2df1813651844 value=100000
-Transfer 1 #1805: from=0x0000000000000000000000000000000000000000 to=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 value=100000
+Mint 0 #119 {"amount":"1.007e+23","to":"0xa44a08d3f6933c69212114bb66e2df1813651844"}
+Mint 1 #119 {"amount":"1.007e+23","to":"0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0"}
+Transfer 0 #119: from=0x0000000000000000000000000000000000000000 to=0xa44a08d3f6933c69212114bb66e2df1813651844 value=100700
+Transfer 1 #119: from=0x0000000000000000000000000000000000000000 to=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 value=100700
 
 ---------- Finalise And Activate Token Transfers ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.022563240000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.017814264000000000   876302211.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.018333328000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.018333328000000000   876300524.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502141336000000000      120500.000000000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.501906840000000000      120500.000000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000000000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500000000000267667      121343.500000000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500000000000238355      121343.500000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000000000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
@@ -336,20 +379,20 @@ Transfer 1 #1805: from=0x0000000000000000000000000000000000000000 to=0xa33a6c312
 PASS Finalise And Activate Token Transfers - crowdsale.mintToken(ac11, 123456789 tokens)
 PASS Finalise And Activate Token Transfers - Close sale
 PASS Finalise And Activate Token Transfers - Activate token transfer
-finalise_1Tx status=0x1 Success gas=200000 gasUsed=56172 costETH=0.000449376 costUSD=0.2951052192 @ ETH/USD=656.7 gasPrice=8 gwei block=1808 txIx=0 txId=0x9f5f8d9f720d097cee54bae7cf179e1525e84a9bba96530b7e41561017855e82 @ 1526309010 Mon, 14 May 2018 14:43:30 UTC
-finalise_2Tx status=0x1 Success gas=200000 gasUsed=96086 costETH=0.000768688 costUSD=0.5047974096 @ ETH/USD=656.7 gasPrice=8 gwei block=1808 txIx=1 txId=0x3c9b425b526e4b7df0bca026629aff27c6db5aea90cf4e5ac32e98f3223ca36e @ 1526309010 Mon, 14 May 2018 14:43:30 UTC
-finalise_3Tx status=0x1 Success gas=200000 gasUsed=27023 costETH=0.000216184 costUSD=0.1419680328 @ ETH/USD=656.7 gasPrice=8 gwei block=1810 txIx=0 txId=0x2bc189cfcf204ce90ff4cbe78cf379119aa0d4a556a183ced4707f75a19466d2 @ 1526309012 Mon, 14 May 2018 14:43:32 UTC
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+finalise_1Tx status=0x1 Success gas=200000 gasUsed=56194 costETH=0.000449552 costUSD=0.2952207984 @ ETH/USD=656.7 gasPrice=8 gwei block=122 txIx=0 txId=0xd99c48864c1fb173795c8cde8302aa3704cc21c99b52793fefaf52e22f2a901a @ 1527082351 Wed, 23 May 2018 13:32:31 UTC
+finalise_2Tx status=0x1 Success gas=200000 gasUsed=96108 costETH=0.000768864 costUSD=0.5049129888 @ ETH/USD=656.7 gasPrice=8 gwei block=122 txIx=1 txId=0x0687fa51f5efe8e23010472f307930290d99da5c7173b857489a6acc1054a270 @ 1527082351 Wed, 23 May 2018 13:32:31 UTC
+finalise_3Tx status=0x1 Success gas=200000 gasUsed=27023 costETH=0.000216184 costUSD=0.1419680328 @ ETH/USD=656.7 gasPrice=8 gwei block=124 txIx=0 txId=0xc527b78484bb580e868103d8f96b8a12ab476da0fecd7b7b0d5626d0dfa8aa27 @ 1527082353 Wed, 23 May 2018 13:32:33 UTC
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
-crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.rate=1007
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=true
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=241 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token
@@ -357,51 +400,51 @@ token.decimals=18
 token.totalSupply=1000000000
 token.mintingFinished=true
 token.active=true
-OwnershipTransferred 0 #1808 {"newOwner":"0xa11aae29840fbb5c86e6fd4cf809eba183aef433","previousOwner":"0x938d22c583154e944cc0f6e83749261d88bf01f0"}
-Mint 0 #1808 {"amount":"1.23456789e+26","to":"0xabba43e7594e3b76afb157989e93c6621497fd4b"}
-Mint 1 #1808 {"amount":"8.76302211e+26","to":"0xa11aae29840fbb5c86e6fd4cf809eba183aef433"}
-MintFinished 0 #1808 {}
-Transfer 0 #1808: from=0x0000000000000000000000000000000000000000 to=0xabba43e7594e3b76afb157989e93c6621497fd4b value=123456789
-Transfer 1 #1808: from=0x0000000000000000000000000000000000000000 to=0xa11aae29840fbb5c86e6fd4cf809eba183aef433 value=876302211
+OwnershipTransferred 0 #122 {"newOwner":"0xa11aae29840fbb5c86e6fd4cf809eba183aef433","previousOwner":"0x90d8927407c79c4a28ee879b821c76fc9bcc2688"}
+Mint 0 #122 {"amount":"1.23456789e+26","to":"0xabba43e7594e3b76afb157989e93c6621497fd4b"}
+Mint 1 #122 {"amount":"8.76300524e+26","to":"0xa11aae29840fbb5c86e6fd4cf809eba183aef433"}
+MintFinished 0 #122 {}
+Transfer 0 #122: from=0x0000000000000000000000000000000000000000 to=0xabba43e7594e3b76afb157989e93c6621497fd4b value=123456789
+Transfer 1 #122: from=0x0000000000000000000000000000000000000000 to=0xa11aae29840fbb5c86e6fd4cf809eba183aef433 value=876300524
 
 ---------- Move Tokens #1 ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.023704568000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.017814264000000000   876302211.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.019474656000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.018333328000000000   876300524.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502560128000000000      120499.999999000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.502271144000000000      120499.970000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000001000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500418792000267667      121343.499999000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500364304000238355      121343.470000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000001000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9       -0.000358232000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.030000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
-transfer1_1Tx status=0x1 Success gas=100000 gasUsed=52349 costETH=0.000418792 costUSD=0.2750207064 @ ETH/USD=656.7 gasPrice=8 gwei block=1813 txIx=1 txId=0xbd00e86ab0592aed872af276702506c834f1caecdb85c686c377a708c3eaa26d @ 1526309015 Mon, 14 May 2018 14:43:35 UTC
-transfer1_2Tx status=0x1 Success gas=100000 gasUsed=45538 costETH=0.000364304 costUSD=0.2392384368 @ ETH/USD=656.7 gasPrice=8 gwei block=1813 txIx=0 txId=0x0fd58f9ebcb3d09a2dafa95b1bceb626805e8a3a51a53e31ac2a7b01da50a535 @ 1526309015 Mon, 14 May 2018 14:43:35 UTC
-transfer1_3Tx status=0x1 Success gas=100000 gasUsed=44779 costETH=0.000358232 costUSD=0.2352509544 @ ETH/USD=656.7 gasPrice=8 gwei block=1815 txIx=0 txId=0xe1f75b3f1bf9a42ff7cf1779c5b5f5870d99e57335f306fca7a14190a6fa46a6 @ 1526309017 Mon, 14 May 2018 14:43:37 UTC
+transfer1_1Tx status=0x1 Success gas=100000 gasUsed=52349 costETH=0.000418792 costUSD=0.2750207064 @ ETH/USD=656.7 gasPrice=8 gwei block=127 txIx=0 txId=0xc9d92c3de8400bc10ccc681591e26b7fa319f17a10e9eb31251c87b0c18e645a @ 1527082356 Wed, 23 May 2018 13:32:36 UTC
+transfer1_2Tx status=0x1 Success gas=100000 gasUsed=45538 costETH=0.000364304 costUSD=0.2392384368 @ ETH/USD=656.7 gasPrice=8 gwei block=127 txIx=1 txId=0x07f80ef18400c41a25c46d1b87cf733caab9c5fc8bea2234c3c4c49d691d310d @ 1527082356 Wed, 23 May 2018 13:32:36 UTC
+transfer1_3Tx status=0x1 Success gas=100000 gasUsed=44779 costETH=0.000358232 costUSD=0.2352509544 @ ETH/USD=656.7 gasPrice=8 gwei block=129 txIx=0 txId=0xde912d84f35030f7b0ba32f1ccc8da5218e5700d5ad32cd797a42ba40f9216a1 @ 1527082358 Wed, 23 May 2018 13:32:38 UTC
 PASS Move Tokens #1 - transfer 0.000001 tokens ac3 -> ac5. CHECK for movement
 PASS Move Tokens #1 - approve 0.03 tokens ac4 -> ac6
 PASS Move Tokens #1 - transferFrom 0.03 tokens ac4 -> ac7 by ac6. CHECK for movement
-crowdsaleContractAddress=0x938d22c583154e944cc0f6e83749261d88bf01f0
+crowdsaleContractAddress=0x90d8927407c79c4a28ee879b821c76fc9bcc2688
 crowdsale.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
-crowdsale.token=0x10794bcede3f0d265f965bf35018b8df414e4c46
+crowdsale.token=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 crowdsale.wallet=0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976
-crowdsale.rate=1000
-crowdsale.initialTime=1526308924 Mon, 14 May 2018 14:42:04 UTC Tue, 15 May 2018 00:42:04 AEST
+crowdsale.rate=1007
+crowdsale.initialTime=1527082265 Wed, 23 May 2018 13:31:05 UTC Wed, 23 May 2018 23:31:05 AEST
 crowdsale.saleClosed=true
 crowdsale.weiCap=2000 ETH
 crowdsale.weiRaised=241 ETH
 crowdsale.TOTAL_TOKEN_SUPPLY=1000000000 tokens
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token
@@ -409,43 +452,43 @@ token.decimals=18
 token.totalSupply=1000000000
 token.mintingFinished=true
 token.active=true
-Approval 0 #1813 owner=0xa44a08d3f6933c69212114bb66e2df1813651844 spender=0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9 value=0.03
-Transfer 0 #1813: from=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 to=0xa55a151eb00fded1634d27d1127b4be4627079ea value=0.000001
-Transfer 1 #1815: from=0xa44a08d3f6933c69212114bb66e2df1813651844 to=0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec value=0.03
+Approval 0 #127 owner=0xa44a08d3f6933c69212114bb66e2df1813651844 spender=0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9 value=0.03
+Transfer 0 #127: from=0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0 to=0xa55a151eb00fded1634d27d1127b4be4627079ea value=0.000001
+Transfer 1 #129: from=0xa44a08d3f6933c69212114bb66e2df1813651844 to=0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec value=0.03
 
 ---------- Deploy Vesting Contract ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.028746776000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.022856472000000000   876302211.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.024516864000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.023375536000000000   876300524.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502560128000000000      120499.999999000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.502271144000000000      120499.970000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000001000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500418792000267667      121343.499999000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500364304000238355      121343.470000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000001000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9       -0.000358232000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.030000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
-14 0xb797d2439cd318684f93de852b4928ea75ae6917        0.000000000000000000           0.000000000000000000 Vesting Contract
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+14 0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a        0.000000000000000000           0.000000000000000000 Vesting Contract
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
 PASS Deploy Vesting Contract
-vestingAddress=0xb797d2439cd318684f93de852b4928ea75ae6917 status=0x1 Success gas=6000000 gasUsed=630276 costETH=0.005042208 costUSD=3.3112179936 @ ETH/USD=656.7 gasPrice=8 gwei block=1818 txIx=0 txId=0xb0ec51744bd9268e127f6d2c9792bf2acf43e1d7155d129dd9aee37e8af6e02e @ 1526309020 Mon, 14 May 2018 14:43:40 UTC
-vestingContractAddress=0xb797d2439cd318684f93de852b4928ea75ae6917
+vestingAddress=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a status=0x1 Success gas=6000000 gasUsed=630276 costETH=0.005042208 costUSD=3.3112179936 @ ETH/USD=656.7 gasPrice=8 gwei block=132 txIx=0 txId=0xd63f60a1a38ad27ba2d1974b7935e6222a52e5eaedf01bba0734bcaa0d2c969e @ 1527082361 Wed, 23 May 2018 13:32:41 UTC
+vestingContractAddress=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a
 vesting.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 vesting.beneficiary=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756
-vesting.startFrom=1526309048 Mon, 14 May 2018 14:44:08 UTC Tue, 15 May 2018 00:44:08 AEST
+vesting.startFrom=1527082389 Wed, 23 May 2018 13:33:09 UTC Wed, 23 May 2018 23:33:09 AEST
 vesting.period=30
 vesting.tokensReleasedPerPeriod=100 tokens
 vesting.elapsedPeriods=0
-vesting.getToken=0x10794bcede3f0d265f965bf35018b8df414e4c46
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+vesting.getToken=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token
@@ -457,36 +500,36 @@ token.active=true
 ---------- Transfer To Vesting Contract ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.029167104000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.023276800000000000   876302061.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.024937192000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.023795864000000000   876300374.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502560128000000000      120499.999999000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.502271144000000000      120499.970000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000001000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500418792000267667      121343.499999000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500364304000238355      121343.470000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000001000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9       -0.000358232000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.030000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
-14 0xb797d2439cd318684f93de852b4928ea75ae6917        0.000000000000000000         150.000000000000000000 Vesting Contract
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+14 0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a        0.000000000000000000         150.000000000000000000 Vesting Contract
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
-transferToVesting1_1Tx status=0x1 Success gas=100000 gasUsed=52541 costETH=0.000420328 costUSD=0.2760293976 @ ETH/USD=656.7 gasPrice=8 gwei block=1821 txIx=0 txId=0x764f7c4abf0b43e3d086143e765d44fdeaea4725cf47a8739af4dc32c8bc43fb @ 1526309023 Mon, 14 May 2018 14:43:43 UTC
+transferToVesting1_1Tx status=0x1 Success gas=100000 gasUsed=52541 costETH=0.000420328 costUSD=0.2760293976 @ ETH/USD=656.7 gasPrice=8 gwei block=135 txIx=0 txId=0x33226538b6d1719ebb6b6c4d9c3ab7ef63b4560f90849a3237fd9f8499bbf137 @ 1527082364 Wed, 23 May 2018 13:32:44 UTC
 PASS Transfer To Vesting Contract - transfer 150 tokens to vesting contract
-vestingContractAddress=0xb797d2439cd318684f93de852b4928ea75ae6917
+vestingContractAddress=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a
 vesting.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 vesting.beneficiary=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756
-vesting.startFrom=1526309048 Mon, 14 May 2018 14:44:08 UTC Tue, 15 May 2018 00:44:08 AEST
+vesting.startFrom=1527082389 Wed, 23 May 2018 13:33:09 UTC Wed, 23 May 2018 23:33:09 AEST
 vesting.period=30
 vesting.tokensReleasedPerPeriod=100 tokens
 vesting.elapsedPeriods=0
-vesting.getToken=0x10794bcede3f0d265f965bf35018b8df414e4c46
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+vesting.getToken=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token
@@ -494,44 +537,44 @@ token.decimals=18
 token.totalSupply=1000000000
 token.mintingFinished=true
 token.active=true
-Transfer 0 #1821: from=0xa11aae29840fbb5c86e6fd4cf809eba183aef433 to=0xb797d2439cd318684f93de852b4928ea75ae6917 value=150
+Transfer 0 #135: from=0xa11aae29840fbb5c86e6fd4cf809eba183aef433 to=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a value=150
 
-Waiting until 'vesting.startFrom()' at 1526309048+15s=Tue, 15 May 2018 00:44:24 AEST now=Tue, 15 May 2018 00:43:44 AEST
-Waited until 'vesting.startFrom()' at at 1526309048+15s=Tue, 15 May 2018 00:44:24 AEST now=Tue, 15 May 2018 00:44:24 AEST
+Waiting until 'vesting.startFrom()' at 1527082389+15s=Wed, 23 May 2018 23:33:25 AEST now=Wed, 23 May 2018 23:32:45 AEST
+Waited until 'vesting.startFrom()' at at 1527082389+15s=Wed, 23 May 2018 23:33:25 AEST now=Wed, 23 May 2018 23:33:25 AEST
 
 ---------- Release Vesting #0 ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.029397680000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.023507376000000000   876302061.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.025167768000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.024026440000000000   876300374.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502560128000000000      120499.999999000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.502271144000000000      120499.970000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000001000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500418792000267667      121343.499999000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500364304000238355      121343.470000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000001000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9       -0.000358232000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.030000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756        0.000000000000000000           0.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
-14 0xb797d2439cd318684f93de852b4928ea75ae6917        0.000000000000000000         150.000000000000000000 Vesting Contract
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+14 0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a        0.000000000000000000         150.000000000000000000 Vesting Contract
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
-releaseVesting0_1Tx status=0x0 Failure gas=200000 gasUsed=28822 costETH=0.000230576 costUSD=0.1514192592 @ ETH/USD=656.7 gasPrice=8 gwei block=1864 txIx=0 txId=0x266b0e6e4e375b9b319c6d90455d47bac9bc61082096a244bed16463136c3232 @ 1526309066 Mon, 14 May 2018 14:44:26 UTC
+releaseVesting0_1Tx status=0x0 Failure gas=200000 gasUsed=28822 costETH=0.000230576 costUSD=0.1514192592 @ ETH/USD=656.7 gasPrice=8 gwei block=178 txIx=0 txId=0x4ec2188e419d34e734fa4090ae8f794c95c1ef0e3b4c914f709024eb8deb9137 @ 1527082407 Wed, 23 May 2018 13:33:27 UTC
 PASS Release Vesting #0 - Expecting failure - 0 tokens released
-vestingContractAddress=0xb797d2439cd318684f93de852b4928ea75ae6917
+vestingContractAddress=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a
 vesting.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 vesting.beneficiary=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756
-vesting.startFrom=1526309048 Mon, 14 May 2018 14:44:08 UTC Tue, 15 May 2018 00:44:08 AEST
+vesting.startFrom=1527082389 Wed, 23 May 2018 13:33:09 UTC Wed, 23 May 2018 23:33:09 AEST
 vesting.period=30
 vesting.tokensReleasedPerPeriod=100 tokens
 vesting.elapsedPeriods=0
-vesting.getToken=0x10794bcede3f0d265f965bf35018b8df414e4c46
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+vesting.getToken=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token
@@ -540,43 +583,43 @@ token.totalSupply=1000000000
 token.mintingFinished=true
 token.active=true
 
-Waiting until 'vesting.startFrom()+45' at 1526309048+45s=Tue, 15 May 2018 00:44:54 AEST now=Tue, 15 May 2018 00:44:27 AEST
-Waited until 'vesting.startFrom()+45' at at 1526309048+45s=Tue, 15 May 2018 00:44:54 AEST now=Tue, 15 May 2018 00:44:54 AEST
+Waiting until 'vesting.startFrom()+45' at 1527082389+45s=Wed, 23 May 2018 23:33:55 AEST now=Wed, 23 May 2018 23:33:28 AEST
+Waited until 'vesting.startFrom()+45' at at 1527082389+45s=Wed, 23 May 2018 23:33:55 AEST now=Wed, 23 May 2018 23:33:55 AEST
 
 ---------- Release Vesting #1 ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.030053056000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.023507376000000000   876302061.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.025823144000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.024026440000000000   876300374.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502560128000000000      120499.999999000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.502271144000000000      120499.970000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000001000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500418792000267667      121343.499999000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500364304000238355      121343.470000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000001000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9       -0.000358232000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.030000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756       -0.000655376000000000         100.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
-14 0xb797d2439cd318684f93de852b4928ea75ae6917        0.000000000000000000          50.000000000000000000 Vesting Contract
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+14 0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a        0.000000000000000000          50.000000000000000000 Vesting Contract
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
-releaseVesting1_1Tx status=0x1 Success gas=200000 gasUsed=81922 costETH=0.000655376 costUSD=0.4303854192 @ ETH/USD=656.7 gasPrice=8 gwei block=1894 txIx=0 txId=0xedf00f7144366aba77c7b58ca508ae57e1013b66fc162067738fa896b4dd5b57 @ 1526309096 Mon, 14 May 2018 14:44:56 UTC
+releaseVesting1_1Tx status=0x1 Success gas=200000 gasUsed=81922 costETH=0.000655376 costUSD=0.4303854192 @ ETH/USD=656.7 gasPrice=8 gwei block=208 txIx=0 txId=0x29d4e15ede535c5d52bcf3680dc47ce3814412b559d08d7823ea3ea067b4a96b @ 1527082437 Wed, 23 May 2018 13:33:57 UTC
 PASS Release Vesting #1 - Expecting 100 tokens released, executed by beneficiary
-vestingContractAddress=0xb797d2439cd318684f93de852b4928ea75ae6917
+vestingContractAddress=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a
 vesting.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 vesting.beneficiary=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756
-vesting.startFrom=1526309048 Mon, 14 May 2018 14:44:08 UTC Tue, 15 May 2018 00:44:08 AEST
+vesting.startFrom=1527082389 Wed, 23 May 2018 13:33:09 UTC Wed, 23 May 2018 23:33:09 AEST
 vesting.period=30
 vesting.tokensReleasedPerPeriod=100 tokens
 vesting.elapsedPeriods=1
-vesting.getToken=0x10794bcede3f0d265f965bf35018b8df414e4c46
-Released 0 #1894 {"amount":"100000000000000000000"}
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+vesting.getToken=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+Released 0 #208 {"amount":"100000000000000000000"}
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token
@@ -584,45 +627,45 @@ token.decimals=18
 token.totalSupply=1000000000
 token.mintingFinished=true
 token.active=true
-Transfer 0 #1894: from=0xb797d2439cd318684f93de852b4928ea75ae6917 to=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756 value=100
+Transfer 0 #208: from=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a to=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756 value=100
 
-Waiting until 'vesting.startFrom()+75' at 1526309048+75s=Tue, 15 May 2018 00:45:24 AEST now=Tue, 15 May 2018 00:44:57 AEST
-Waited until 'vesting.startFrom()+75' at at 1526309048+75s=Tue, 15 May 2018 00:45:24 AEST now=Tue, 15 May 2018 00:45:24 AEST
+Waiting until 'vesting.startFrom()+75' at 1527082389+75s=Wed, 23 May 2018 23:34:25 AEST now=Wed, 23 May 2018 23:33:58 AEST
+Waited until 'vesting.startFrom()+75' at at 1527082389+75s=Wed, 23 May 2018 23:34:25 AEST now=Wed, 23 May 2018 23:34:25 AEST
 
 ---------- Release Vesting #2 ----------
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.030367688000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.023822008000000000   876302061.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.026137776000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.024341072000000000   876300374.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502560128000000000      120499.999999000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.502271144000000000      120499.970000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000001000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500418792000267667      121343.499999000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500364304000238355      121343.470000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000001000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9       -0.000358232000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.030000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756       -0.000655376000000000         150.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
-14 0xb797d2439cd318684f93de852b4928ea75ae6917        0.000000000000000000           0.000000000000000000 Vesting Contract
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+14 0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a        0.000000000000000000           0.000000000000000000 Vesting Contract
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
-releaseVesting2_1Tx status=0x1 Success gas=200000 gasUsed=39329 costETH=0.000314632 costUSD=0.2066188344 @ ETH/USD=656.7 gasPrice=8 gwei block=1924 txIx=0 txId=0xbf01ad2fcf4301c9968de72802c77febe9b1fed2e8c87f2ecf379b72b62b535c @ 1526309126 Mon, 14 May 2018 14:45:26 UTC
+releaseVesting2_1Tx status=0x1 Success gas=200000 gasUsed=39329 costETH=0.000314632 costUSD=0.2066188344 @ ETH/USD=656.7 gasPrice=8 gwei block=238 txIx=0 txId=0x5e55db26c7c256a6a0031f21789c4c0c4bbe8f56ce48f7c43350f9a3f9efa88f @ 1527082467 Wed, 23 May 2018 13:34:27 UTC
 PASS Release Vesting #2 - Expecting 50 tokens released, executed by contract owner account
-vestingContractAddress=0xb797d2439cd318684f93de852b4928ea75ae6917
+vestingContractAddress=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a
 vesting.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 vesting.beneficiary=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756
-vesting.startFrom=1526309048 Mon, 14 May 2018 14:44:08 UTC Tue, 15 May 2018 00:44:08 AEST
+vesting.startFrom=1527082389 Wed, 23 May 2018 13:33:09 UTC Wed, 23 May 2018 23:33:09 AEST
 vesting.period=30
 vesting.tokensReleasedPerPeriod=100 tokens
 vesting.elapsedPeriods=2
-vesting.getToken=0x10794bcede3f0d265f965bf35018b8df414e4c46
-Released 0 #1924 {"amount":"50000000000000000000"}
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+vesting.getToken=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+Released 0 #238 {"amount":"50000000000000000000"}
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token
@@ -630,45 +673,45 @@ token.decimals=18
 token.totalSupply=1000000000
 token.mintingFinished=true
 token.active=true
-Transfer 0 #1924: from=0xb797d2439cd318684f93de852b4928ea75ae6917 to=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756 value=50
+Transfer 0 #238: from=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a to=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756 value=50
 
-Waiting until 'vesting.startFrom()+105' at 1526309048+105s=Tue, 15 May 2018 00:45:54 AEST now=Tue, 15 May 2018 00:45:27 AEST
-Waited until 'vesting.startFrom()+105' at at 1526309048+105s=Tue, 15 May 2018 00:45:54 AEST now=Tue, 15 May 2018 00:45:54 AEST
+Waiting until 'vesting.startFrom()+105' at 1527082389+105s=Wed, 23 May 2018 23:34:55 AEST now=Wed, 23 May 2018 23:34:28 AEST
+Waited until 'vesting.startFrom()+105' at at 1527082389+105s=Wed, 23 May 2018 23:34:55 AEST now=Wed, 23 May 2018 23:34:55 AEST
 
 ---------- Release Vesting #3 ----------
 
  # Account                                             EtherBalanceChange                          Token Name
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
- 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.030620280000000000           0.000000000000000000 Account #0 - Miner
- 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.024074600000000000   876302061.000000000000000000 Account #1 - Contract Owner
+ 0 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e        0.026390368000593622           0.000000000000000000 Account #0 - Miner
+ 1 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.024593664000000000   876300374.000000000000000000 Account #1 - Contract Owner
  2 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976      241.000000000000000000           0.000000000000000000 Account #2 - Wallet
- 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.502560128000000000      120499.999999000000000000 Account #3 - Whitelisted 10 ETH
- 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.502271144000000000      120499.970000000000000000 Account #4 - Whitelisted 10 ETH
- 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000700800000000000           0.000001000000000000 Account #5 - Not Whitelisted
+ 3 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -120.500418792000267667      121343.499999000000000000 Account #3 - Whitelisted 10 ETH
+ 4 0xa44a08d3f6933c69212114bb66e2df1813651844     -120.500364304000238355      121343.470000000000000000 Account #4 - Whitelisted 10 ETH
+ 5 0xa55a151eb00fded1634d27d1127b4be4627079ea       -0.000000000000087600           0.000001000000000000 Account #5 - Not Whitelisted
  6 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9       -0.000358232000000000           0.000000000000000000 Account #6
  7 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.030000000000000000 Account #7
  8 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
  9 0xa99a0ae3354c06b1459fd441a32a3f71005d7da0        0.000000000000000000           0.000000000000000000 Account #9
 10 0xaaaa9de1e6c564446ebca0fd102d8bd92093c756       -0.000655376000000000         150.000000000000000000 Account #10 - Vesting beneficiary
 11 0xabba43e7594e3b76afb157989e93c6621497fd4b        0.000000000000000000   123456789.000000000000000000 Account #11
-12 0x938d22c583154e944cc0f6e83749261d88bf01f0        0.000000000000000000           0.000000000000000000 Crowdsale Contract
-13 0x10794bcede3f0d265f965bf35018b8df414e4c46        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
-14 0xb797d2439cd318684f93de852b4928ea75ae6917        0.000000000000000000           0.000000000000000000 Vesting Contract
+12 0x90d8927407c79c4a28ee879b821c76fc9bcc2688        0.000000000000000000           0.000000000000000000 Crowdsale Contract
+13 0x766d58c8c163fcd9652ae1fed8b24fa54359542d        0.000000000000000000           0.000000000000000000 Token 'OLT' 'Oneledger Token'
+14 0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a        0.000000000000000000           0.000000000000000000 Vesting Contract
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
                                                                            1000000000.000000000000000000 Total Token Balances
 -- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
 
-releaseVesting3_1Tx status=0x0 Failure gas=200000 gasUsed=31574 costETH=0.000252592 costUSD=0.1658771664 @ ETH/USD=656.7 gasPrice=8 gwei block=1954 txIx=0 txId=0x3ebcf66bac193dc010458cbc00777378f1646a0bf03fda5a4e9f4ed7a2cf9dc3 @ 1526309156 Mon, 14 May 2018 14:45:56 UTC
+releaseVesting3_1Tx status=0x0 Failure gas=200000 gasUsed=31574 costETH=0.000252592 costUSD=0.1658771664 @ ETH/USD=656.7 gasPrice=8 gwei block=268 txIx=0 txId=0x34d9a608da88aad95452deb916da6711c725e20de9bb6765b2f1f7a9f9f8423b @ 1527082497 Wed, 23 May 2018 13:34:57 UTC
 PASS Release Vesting #3 - Expecting failure
-vestingContractAddress=0xb797d2439cd318684f93de852b4928ea75ae6917
+vestingContractAddress=0x936e75a404fc4ea6aba4d9c3b20ea67abab3188a
 vesting.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 vesting.beneficiary=0xaaaa9de1e6c564446ebca0fd102d8bd92093c756
-vesting.startFrom=1526309048 Mon, 14 May 2018 14:44:08 UTC Tue, 15 May 2018 00:44:08 AEST
+vesting.startFrom=1527082389 Wed, 23 May 2018 13:33:09 UTC Wed, 23 May 2018 23:33:09 AEST
 vesting.period=30
 vesting.tokensReleasedPerPeriod=100 tokens
 vesting.elapsedPeriods=2
-vesting.getToken=0x10794bcede3f0d265f965bf35018b8df414e4c46
-tokenContractAddress=0x10794bcede3f0d265f965bf35018b8df414e4c46
+vesting.getToken=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
+tokenContractAddress=0x766d58c8c163fcd9652ae1fed8b24fa54359542d
 token.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
 token.symbol=OLT
 token.name=Oneledger Token

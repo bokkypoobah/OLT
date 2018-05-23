@@ -48,8 +48,9 @@ contract ICO is Ownable {
     // BK Ok
     uint256 public TOTAL_TOKEN_SUPPLY = 1000000000 * (10 ** 18);
 
-    // BK Ok - Event
+    // BK Next 2 Ok - Event
     event BuyTokens(uint256 weiAmount, uint256 rate, uint256 token, address beneficiary);
+    event UpdateRate(uint256 rate);
 
     /**
     * @dev constructor
@@ -80,6 +81,19 @@ contract ICO is Ownable {
     function() external payable {
         // BK Ok
         buyTokens();
+    }
+
+    /**
+     * @dev update the rate
+     */
+    // BK Ok - Only owner can execute, before initialTime
+    function updateRate(uint256 rate_) public onlyOwner {
+      // BK Ok
+      require(now <= initialTime);
+      // BK Ok
+      rate = rate_;
+      // BK Ok
+      emit UpdateRate(rate);
     }
 
     /**

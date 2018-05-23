@@ -161,7 +161,25 @@ printCrowdsaleContractDetails();
 printTokenContractDetails();
 console.log("RESULT: ");
 
+
+// -----------------------------------------------------------------------------
+var updateRateMessage = "Update Rate";
+var rate = "1007";
+// -----------------------------------------------------------------------------
+console.log("RESULT: ---------- " + updateRateMessage + " ----------");
+var updateRate_1Tx = crowdsale.updateRate(rate, {from: contractOwnerAccount, gas: 100000, gasPrice: defaultGasPrice});
+while (txpool.status.pending > 0) {
+}
+printBalances();
+failIfTxStatusError(updateRate_1Tx, updateRateMessage);
+printTxData("updateRate_1Tx", updateRate_1Tx);
+printCrowdsaleContractDetails();
+printTokenContractDetails();
+console.log("RESULT: ");
+
+
 waitUntil("crowdsale.initialTime", crowdsale.initialTime(), 0);
+
 
 // -----------------------------------------------------------------------------
 var sendContribution0Message = "Send Contribution #0";

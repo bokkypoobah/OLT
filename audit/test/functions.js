@@ -378,6 +378,13 @@ function printCrowdsaleContractDetails() {
     });
     buyTokensEvents.stopWatching();
 
+    var updateRateEvents = contract.UpdateRate({}, { fromBlock: crowdsaleFromBlock, toBlock: latestBlock });
+    i = 0;
+    updateRateEvents.watch(function (error, result) {
+      console.log("RESULT: UpdateRate " + i++ + " #" + result.blockNumber + " " + JSON.stringify(result.args));
+    });
+    updateRateEvents.stopWatching();
+
     crowdsaleFromBlock = latestBlock + 1;
   }
 }
