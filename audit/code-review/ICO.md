@@ -8,14 +8,14 @@ Source file [../../contracts/ICO.sol](../../contracts/ICO.sol).
 
 ```javascript
 // BK Ok
-pragma solidity 0.4.23;
+pragma solidity 0.4.24;
 
 // BK Next 5 Ok
 import "./OneledgerToken.sol";
 import "./OneledgerTokenVesting.sol";
-import "zeppelin-solidity/contracts/math/SafeMath.sol";
-import "zeppelin-solidity/contracts/ownership/Ownable.sol";
-import "zeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-solidity/contracts/math/SafeMath.sol";
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
 
 // BK Ok
@@ -51,6 +51,7 @@ contract ICO is Ownable {
     // BK Next 2 Ok - Event
     event BuyTokens(uint256 weiAmount, uint256 rate, uint256 token, address beneficiary);
     event UpdateRate(uint256 rate);
+    event UpdateWeiCap(uint256 weiCap);
 
     /**
     * @dev constructor
@@ -92,8 +93,21 @@ contract ICO is Ownable {
       require(now <= initialTime);
       // BK Ok
       rate = rate_;
-      // BK Ok
+      // BK Ok - Log event
       emit UpdateRate(rate);
+    }
+
+    /**
+     * @dev update the weiCap
+     */
+    // BK Ok - Only owner can execute, before initialTime
+    function updateWeiCap(uint256 weiCap_) public onlyOwner {
+      // BK Ok
+      require(now <= initialTime);
+      // BK Ok
+      weiCap = weiCap_;
+      // BK Ok - Log event
+      emit UpdateWeiCap(weiCap_);
     }
 
     /**
@@ -151,7 +165,10 @@ contract ICO is Ownable {
         // BK NOTE - Could add a `require(!saleClosed);` statement here, but does not matter as the token contract calls will throw an error
         saleClosed = true;
         // BK Ok
-        token.mint(owner, TOTAL_TOKEN_SUPPLY.sub(token.totalSupply()));
+        if (TOTAL_TOKEN_SUPPLY > token.totalSupply()) {
+          // BK Ok
+          token.mint(owner, TOTAL_TOKEN_SUPPLY.sub(token.totalSupply()));
+        }
         // BK Ok
         token.finishMinting();
         // BK Ok

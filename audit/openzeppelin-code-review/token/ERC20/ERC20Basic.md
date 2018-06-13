@@ -8,7 +8,7 @@ Source file [../../../openzeppelin-contracts/token/ERC20/ERC20Basic.sol](../../.
 
 ```javascript
 // BK Ok
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.23;
 
 
 /**

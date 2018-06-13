@@ -8,7 +8,7 @@ Source file [../../../openzeppelin-contracts/token/ERC20/BasicToken.sol](../../.
 
 ```javascript
 // BK Ok
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.23;
 
 
 // BK Next 2 Ok
@@ -52,13 +52,12 @@ contract BasicToken is ERC20Basic {
     // BK Ok - Account has to have sufficient balance
     require(_value <= balances[msg.sender]);
 
-    // SafeMath.sub will throw if there is not enough balance.
     // BK Ok
     balances[msg.sender] = balances[msg.sender].sub(_value);
     // BK Ok
     balances[_to] = balances[_to].add(_value);
     // BK Ok - Log event
-    Transfer(msg.sender, _to, _value);
+    emit Transfer(msg.sender, _to, _value);
     // BK Ok
     return true;
   }
@@ -69,7 +68,7 @@ contract BasicToken is ERC20Basic {
   * @return An uint256 representing the amount owned by the passed address.
   */
   // BK Ok - View function
-  function balanceOf(address _owner) public view returns (uint256 balance) {
+  function balanceOf(address _owner) public view returns (uint256) {
     // BK Ok
     return balances[_owner];
   }

@@ -8,7 +8,7 @@ Source file [../../openzeppelin-contracts/ownership/Ownable.sol](../../openzeppe
 
 ```javascript
 // BK Ok
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.23;
 
 
 /**
@@ -22,16 +22,20 @@ contract Ownable {
   address public owner;
 
 
-  // BK Ok - Event
-  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+  // BK Next 2 Ok - Events
+  event OwnershipRenounced(address indexed previousOwner);
+  event OwnershipTransferred(
+    address indexed previousOwner,
+    address indexed newOwner
+  );
 
 
   /**
    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
    * account.
    */
-  // BK Ok - Constructor. Should be `constructor()`
-  function Ownable() public {
+  // BK Ok - Constructor
+  constructor() public {
     // BK Ok
     owner = msg.sender;
   }
@@ -48,19 +52,39 @@ contract Ownable {
   }
 
   /**
-   * @dev Allows the current owner to transfer control of the contract to a newOwner.
-   * @param newOwner The address to transfer ownership to.
+   * @dev Allows the current owner to relinquish control of the contract.
    */
   // BK Ok - Only owner can execute
-  function transferOwnership(address newOwner) public onlyOwner {
+  function renounceOwnership() public onlyOwner {
+    // BK Ok - Log event
+    emit OwnershipRenounced(owner);
     // BK Ok
-    require(newOwner != address(0));
-    // BK Ok - Log event. New compiler version requires `emit` keyword
-    OwnershipTransferred(owner, newOwner);
-    // BK Ok
-    owner = newOwner;
+    owner = address(0);
   }
 
+  /**
+   * @dev Allows the current owner to transfer control of the contract to a newOwner.
+   * @param _newOwner The address to transfer ownership to.
+   */
+  // BK Ok - Only owner can execute
+  function transferOwnership(address _newOwner) public onlyOwner {
+    // BK Ok
+    _transferOwnership(_newOwner);
+  }
+
+  /**
+   * @dev Transfers control of the contract to a newOwner.
+   * @param _newOwner The address to transfer ownership to.
+   */
+  // BK Ok - Internal function
+  function _transferOwnership(address _newOwner) internal {
+    // BK Ok
+    require(_newOwner != address(0));
+    // BK Ok - Log event
+    emit OwnershipTransferred(owner, _newOwner);
+    // BK Ok
+    owner = _newOwner;
+  }
 }
 
 ```

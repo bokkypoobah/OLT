@@ -10,8 +10,9 @@ This audit has been conducted on OneLedger's source code in commits
 [0892237](https://github.com/Oneledger/OLT/commit/0892237bd158f483e3cc03bf975d49b2bf376c62),
 [f1c5bb7](https://github.com/Oneledger/OLT/commit/f1c5bb7a439782a85204e9764598d695649098f4),
 [ea16049](https://github.com/Oneledger/OLT/commit/ea160497e62fa84ac5d057ecaf3a43175f4d0d00),
-[df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a) and
-[c88c6c4](https://github.com/Oneledger/OLT/commit/c88c6c4dcfe30ec111abd1dcfb4b1c5427231148).
+[df0cd5d](https://github.com/Oneledger/OLT/commit/df0cd5d4eca6f2d216ffdea19e224ceda75e8e7a),
+[c88c6c4](https://github.com/Oneledger/OLT/commit/c88c6c4dcfe30ec111abd1dcfb4b1c5427231148) and
+[572e128](https://github.com/Oneledger/OLT/commit/572e128606be3fb3c03c38c8bd681848efd4d9f9).
 
 No potential vulnerabilities have been identified in the crowdsale, token and vesting contracts.
 
@@ -149,7 +150,9 @@ in [test/test1results.txt](test/test1results.txt) and the detailed output saved 
 
 <br />
 
-### OpenZeppelin 1.8.0 Dependencies
+### OpenZeppelin 1.10.0 Dependencies
+
+The version of OpenZeppelin was upgrade from 1.8.0 to 1.10.0 in [572e128](https://github.com/Oneledger/OLT/commit/572e128606be3fb3c03c38c8bd681848efd4d9f9).
 
 * [x] [openzeppelin-code-review/math/SafeMath.md](openzeppelin-code-review/math/SafeMath.md)
   * [x] library SafeMath

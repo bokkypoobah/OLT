@@ -59,7 +59,7 @@ printf "END_DATE           = '$END_DATE' '$END_DATE_S'\n" | tee -a $TEST1OUTPUT
 `cp -rp ../openzeppelin-contracts/* .`
 
 # --- Modify parameters ---
-`perl -pi -e "s/zeppelin-solidity\/contracts\///" *.sol`
+`perl -pi -e "s/openzeppelin-solidity\/contracts\///" *.sol`
 `perl -pi -e "s/require\(_weiCap\.mul\(_rate\) \<\= TOTAL_TOKEN_SUPPLY\);/\/\/ require\(_weiCap\.mul\(_rate\) \<\= TOTAL_TOKEN_SUPPLY\);/" $CROWDSALESOL`
 `perl -pi -e "s/24 hours/30 seconds/" $CROWDSALESOL`
 `perl -pi -e "s/48 hours/60 seconds/" $CROWDSALESOL`
@@ -71,11 +71,11 @@ do
   echo "$DIFFS1" | tee -a $TEST1OUTPUT
 done
 
-solc_0.4.23 --version | tee -a $TEST1OUTPUT
+solc_0.4.24 --version | tee -a $TEST1OUTPUT
 
-echo "var tokenOutput=`solc_0.4.23 --optimize --pretty-json --combined-json abi,bin,interface $TOKENSOL`;" > $TOKENJS
-echo "var crowdsaleOutput=`solc_0.4.23 --optimize --pretty-json --combined-json abi,bin,interface $CROWDSALESOL`;" > $CROWDSALEJS
-echo "var vestingOutput=`solc_0.4.23 --optimize --pretty-json --combined-json abi,bin,interface $VESTINGSOL`;" > $VESTINGJS
+echo "var tokenOutput=`solc_0.4.24 --optimize --pretty-json --combined-json abi,bin,interface $TOKENSOL`;" > $TOKENJS
+echo "var crowdsaleOutput=`solc_0.4.24 --optimize --pretty-json --combined-json abi,bin,interface $CROWDSALESOL`;" > $CROWDSALEJS
+echo "var vestingOutput=`solc_0.4.24 --optimize --pretty-json --combined-json abi,bin,interface $VESTINGSOL`;" > $VESTINGJS
 
 geth --verbosity 3 attach $GETHATTACHPOINT << EOF | tee -a $TEST1OUTPUT
 loadScript("$TOKENJS");

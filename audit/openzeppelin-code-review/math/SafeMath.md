@@ -8,7 +8,7 @@ Source file [../../openzeppelin-contracts/math/SafeMath.sol](../../openzeppelin-
 
 ```javascript
 // BK Ok
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.23;
 
 
 /**
@@ -22,14 +22,18 @@ library SafeMath {
   * @dev Multiplies two numbers, throws on overflow.
   */
   // BK Ok - Internal pure function
-  function mul(uint256 a, uint256 b) internal pure returns (uint256) {
+  function mul(uint256 a, uint256 b) internal pure returns (uint256 c) {
+    // Gas optimization: this is cheaper than asserting 'a' not being zero, but the
+    // benefit is lost if 'b' is also tested.
+    // See: https://github.com/OpenZeppelin/openzeppelin-solidity/pull/522
     // BK Ok
     if (a == 0) {
       // BK Ok
       return 0;
     }
+
     // BK Ok
-    uint256 c = a * b;
+    c = a * b;
     // BK Ok
     assert(c / a == b);
     // BK Ok
@@ -43,10 +47,10 @@ library SafeMath {
   function div(uint256 a, uint256 b) internal pure returns (uint256) {
     // assert(b > 0); // Solidity automatically throws when dividing by 0
     // BK Ok
-    uint256 c = a / b;
+    // uint256 c = a / b;
     // assert(a == b * c + a % b); // There is no case in which this doesn't hold
     // BK Ok
-    return c;
+    return a / b;
   }
 
   /**
@@ -64,9 +68,9 @@ library SafeMath {
   * @dev Adds two numbers, throws on overflow.
   */
   // BK Ok - Internal pure function
-  function add(uint256 a, uint256 b) internal pure returns (uint256) {
+  function add(uint256 a, uint256 b) internal pure returns (uint256 c) {
     // BK Ok
-    uint256 c = a + b;
+    c = a + b;
     // BK Ok
     assert(c >= a);
     // BK Ok
